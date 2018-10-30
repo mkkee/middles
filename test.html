@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 500px;  /* The height is 400 pixels */
+        width: 70%;  /* The width is the width of the web page */
+       }
+    </style>
+	
+  </head>
+  <body>
+    <!--The div element for the map -->
+    <div id="map"></div>
+	<button onclick="disableAllMarkers();">Clear</button>
+	<button onclick="enableAllMarkers();">Enable</button>
+	<button onclick="disableAllNonPublic();">Publiczne</button>
+	
+	
+    <script>
+//load JSON
+	function loadJSON(callback) {   
+	data = (function(){ /*
+[    {
+        "name": "Bednarska Szko\u0142a Realna",
+        "patron": "",
+		"type":"Niepubliczna",
+        "city": "WARSZAWA",
+        "street": "Kawalerii",
+        "street_num": "5",
+        "webpage": "",
+        "Geo_Location": [
+            {
+                "lat": 52.218158502885544,
+                "long": 21.03980616902306,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.21771255,
+                "long": 21.03975255,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "LXIV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
+        "patron": "Stanis\u0142aw Ignacy Witkiewicz Witkacy",
+		"type":"Publiczna",
+        "city": "WARSZAWA",
+        "street": "Elbl\u0105ska",
+        "street_num": "51",
+        "webpage": "www.liceum64.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.26323540383171,
+                "long": 20.96194497651359,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2633324,
+                "long": 20.9607149019488,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "XXXIX Liceum Og\u00f3lnokszta\u0142c\u0105ce",
+        "patron": "im. Lotnictwa Polskiego",
+		"type":"Publiczna",
+        "city": "WARSZAWA",
+        "street": "Zuga",
+        "street_num": "16",
+        "webpage": "lo39.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.2815635,
+                "long": 20.9546698,
+                "provider": "osm"
+            }
+        ]
+    }
+]
+*/}).toString().split('\n').slice(1, -1).join('\n');
+
+
+	console.log("Loadad JSON data");
+	data_JSON_tbl= JSON.parse(data);
+    //console.log(data_JSON_tbl[0]);
+    //console.log(data_JSON_tbl[1]);
+}
+var data_JSON_tbl
+var marker_table = []
+var infowindow_table = []
+var map;
+
+loadJSON();
+ function disableAllMarkers() {
+	for (m in marker_table) {
+		marker_table[m].m.setMap(null);
+	}
+ }
+ 
+ function enableAllMarkers() {
+ 	for (m in marker_table) {
+		marker_table[m].m.setMap(map);
+	}
+ }
+ 
+  function disableAllNonPublic() {
+	for (m in marker_table) {
+		if (marker_table[m].json_data.type == "Niepubliczna") {
+			marker_table[m].m.setMap(null);
+		}
+	}
+ }
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  console.log("in init map");
+  var waw = {'lat': 52.229158502885544, 'lng': 21.03080616902306};
+   // The map, centered at Uluru
+  map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 11, center: waw});
+	  
+  for (m in data_JSON_tbl) {
+	//console.log(data_JSON_tbl[m]);
+	//console.log(data_JSON_tbl[m].Geo_Location[0]);	
+	var contentString = data_JSON_tbl[m].name;
+	//console.log(contentString);
+    var mkinfowindow = new google.maps.InfoWindow({
+		content: contentString
+    });	
+	var marker =  new google.maps.Marker({
+		position: {lat:data_JSON_tbl[m].Geo_Location[0].lat, lng:data_JSON_tbl[m].Geo_Location[0].long},
+		map: map,
+		title: data_JSON_tbl[m].name,
+		draggable: true,
+		infowindow: mkinfowindow,
+		ifopen: false
+	})
+	var minfo = {m: marker, json_data: data_JSON_tbl[m]}
+	marker_table.push(minfo)
+	
+
+ google.maps.event.addListener(marker, 'click', function() {	  
+	  if(this.ifopen == false) {
+		  this.infowindow.open(map, this);
+		  this.ifopen = true;
+	  } else {
+		  this.infowindow.close(map, this);
+		  this.ifopen = false;
+	  }
+    });
+	};
+  }
+  
+  
+  console.log("Length of Marker table is: "+marker_table.length);
+ // console.log(infowindow_table[0].content)
+  //console.log(infowindow_table[1].content)
+  //console.log(infowindow_table[2].content)
+
+ 
+  // The marker, positioned at Uluru
+  //var marker = new google.maps.Marker({position: {lat: 52.231427, lng: 21.0005827}, map: map});
+  
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Bednarska Szko&#x0142;a Realna</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      'sandstone rock formation in the southern part of the '+
+      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      'Aboriginal people of the area. It has many springs, waterholes, '+
+      'rock caves and ancient paintings. Uluru is listed as a World '+
+      'Heritage Site.</p>'+
+      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>';
+
+/*  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+    var marker = new google.maps.Marker({
+    position: waw,
+    map: map,
+    title: 'Warszawa'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });*/
+  
+  
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    </script>
+	<script>
+
+	</script>
+  </body>
+</html>

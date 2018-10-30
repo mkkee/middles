@@ -1,0 +1,104 @@
+[    
+{
+        "name": "XL Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
+        "patron": "Stefan \u017beromski",
+        "city": "WARSZAWA",
+        "street": "Platynowa",
+        "street_num": "1",
+        "webpage": "www.zeromski.waw.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.221270510675815,
+                "long": 21.227737217179314,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2211972,
+                "long": 21.2277341,
+                "provider": "osm"
+            }
+        ]
+    },
+	    {
+        "name": "Akademickie Liceum Og\u00f3lnokszta\u0142c\u0105ce przy PJATK",
+        "patron": "",
+        "city": "WARSZAWA",
+        "street": "Szcz\u0119\u015bliwicka",
+        "street_num": "33a",
+        "webpage": "",
+        "Geo_Location": [
+            {
+                "lat": 52.214835471233485,
+                "long": 20.969400155259237,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.21445195,
+                "long": 20.9705836142817,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Kreacji Gier Wideo przy Warszawskiej Szkole Filmowej",
+        "patron": "",
+        "city": "WARSZAWA",
+        "street": "Zaj\u0105czka",
+        "street_num": "7",
+        "webpage": "liceumgier.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.26142556838271,
+                "long": 20.992079095475788,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2609811,
+                "long": 20.9920689141181,
+                "provider": "osm"
+            }
+        ]
+    },
+   {
+        "name": "XXVII Liceum Og\u00f3lnokszta\u0142cace",
+        "patron": "Tadeusz Czacki",
+        "city": "WARSZAWA",
+        "street": "Polna",
+        "street_num": "5",
+        "webpage": "www.czacki.edu.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.24140162392521,
+                "long": 21.183207233971956,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2151233,
+                "long": 21.0186768457951,
+                "provider": "osm"
+            }
+        ]
+    },
+	    {
+        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Nr 6",
+        "patron": "",
+        "city": "WARSZAWA",
+        "street": "Bacha",
+        "street_num": "2",
+        "webpage": "www.varsovia.edu.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.22439964855569,
+                "long": 21.20561976066124,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.1727325,
+                "long": 21.0327083,
+                "provider": "osm"
+            }
+        ]
+    },
+	
+	
+]	
