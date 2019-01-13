@@ -51,22 +51,30 @@ loadJSON();
 	}
  }
 
+ function buildInfoWindowSchoolInfo(schoolJSON) {
+  iwcontent = schoolJSON.name;
+  return iwcontent;
+ }
+
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
   console.log("in init map");
   var waw = {'lat': 52.229158502885544, 'lng': 21.03080616902306};
-   // The map, centered at Uluru
+   // The map, centered at Waw
   map = new google.maps.Map(
       document.getElementById('map'), {zoom: 11, center: waw});
-	  
+	
+  //create all markers and infowindows  
   for (m in data_JSON_tbl) {
 	//console.log(data_JSON_tbl[m]);
 	//console.log(data_JSON_tbl[m].Geo_Location[0]);	
-	var contentString = data_JSON_tbl[m].name;
+	//var contentString = data_JSON_tbl[m].name;
+  var contentString = buildInfoWindowSchoolInfo(data_JSON_tbl[m]);
+
 	//console.log(contentString);
     var mkinfowindow = new google.maps.InfoWindow({
-		content: contentString
+		  content: contentString
     });	
 	var marker =  new google.maps.Marker({
 		position: {lat:data_JSON_tbl[m].Geo_Location[0].lat, lng:data_JSON_tbl[m].Geo_Location[0].long},
