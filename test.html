@@ -52,10 +52,10 @@ loadJSON();
  }
 
  function buildInfoWindowSchoolInfo(schoolJSON) {
-  iwcontent = '<div class=\"ifw_container">'
-  iwcontent = iwcontent + "<div class=\"ifw_title\">" + schoolJSON.name +"</div>";
-  iwcontent = iwcontent + "<div class=\"ifw_webpage>\">" + schoolJSON.webpage +"</div>";
-  iwcontent = iwcontent + "</div>";
+  iwcontent = '<div class="ifw_container">'
+  iwcontent = iwcontent + '<div class="ifw_title">' + schoolJSON.name +'</div>';
+  iwcontent = iwcontent + '<div class="ifw_webpage"> <a href="' + schoolJSON.webpage +'"></a></div>';
+  iwcontent = iwcontent + '</div>';
   console.log("ifwcontent = "+iwcontent)
 
   return iwcontent;
