@@ -19,46 +19,57 @@
 		<style type="text/css">
 
 			html, body {
-				width: 100%;
-				height: 100%;
 				margin: 0;
 			}		
 			
+			.menu {grid-area: menu;}
+			.sidebar {grid-area: sidebar;}
+			.main {grid-area: main;}
+			.footer {grid-area: footer;}
+			
 			.gridcontainer {
-				min-height: 100%;
 				display: grid;
-				grid-template-columns: 100px auto;
-				grid-template-rows: 40px auto 20px;
+				grid-template-areas: "menu menu"
+									 "sidebar main"
+									 "footer footer";
+				min-height: 100vh;
+				grid-template-columns: 100px 1fr;
+				grid-template-rows: 40px 1fr 20px;
+				align-items: stretch;
 			}
 			
+			@media screen and (max-width: 600px) {
+			.gridcontainer {
+				grid-template-areas: "menu"
+									 "sidebar"
+									 "main"
+									 "footer";
+				grid-template-columns: 100%;
+				grid-template-rows: 40px 
+									200px 
+									200fr
+									1fr 
+									30px;
+			}
+		}			
 			.menu {
-				grid-column: 1 / 3;
-				grid-row: 1;
 				background-color: #000;
 				color: #fff;
-				align-self: stretch;
-				align: middle;
-				xalign-items: stretch;
-				xplace-self: center stretch;
+				display: flex;
+				align-items: center;
 			}
 			
-			.actions {
-				grid-column: 1;
-				grid-row: 2;
+			.sidebar {
 				background-color: #999;
 			}
 			
 			.main {
-				grid-column: 2;
-				grid-row: 2;
 				background-color: #995;
-				justify-self: stretch;
 			}
 			
 			.footer {
-				grid-column: 1 / 3;
-				grid-row: 3;
 				background-color: #888;
+				xfont-size:10;
 			}
 			
 			
@@ -69,16 +80,17 @@
 <body>
 	<div class="gridcontainer">
 		<div class="menu">
-			logo menu warszawa kontakt
+			<div class="menu_logo">Logo</div>
+			menu warszawa kontakt
 		</div>
-		<div class="actions">
+		<div class="sidebar">
 			actions
 		</div>
 		<div class="main">
 			main
 		</div>
 		<div class="footer">
-			footer
+			Created by AMHF. 2019. 
 		</div>
 	</div>
 </body>
