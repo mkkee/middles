@@ -49,24 +49,24 @@
 									200px 
 									200fr
 									1fr 
-									30px;
+									40px;
 			}
 		}			
 			.menu {
-				background-color: #000;
-				color: #fff;
+				background-color: #ccdefc;
 				display: flex;
 				align-items: center;
-				border-top-left-radius: 0.5em;
-				border-top-right-radius: 0.5em;
+				#border-top-left-radius: 0.5em;
+				#border-top-right-radius: 0.5em;
+				padding-left: 10px;
 			}
 			
 			.sidebar {
-				background-color: #999;
+				#background-color: #999;
 			}
 			
 			.main {
-				background-color: #995;
+				#background-color: #995;
 			}
 			
 			.footer {
@@ -76,10 +76,14 @@
 				color: #fff;
 				font-family: "Courier New", Courier, monospace;
 				font-size: 0.75em; /* 14px/16=0.875em */
-				border-bottom-left-radius: 0.5em;
-				border-bottom-right-radius: 0.5em;
+				#border-bottom-left-radius: 0.5em;
+				#border-bottom-right-radius: 0.5em;
 			}
 			
+			.menu_logo {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
 			
 		</style>
 		
@@ -88,8 +92,8 @@
 <body>
 	<div class="gridcontainer">
 		<div class="menu">
-			<div class="menu_logo">Logo</div>
-			menu warszawa kontakt
+			<div class="menu_logo"><img src="img/middles_logo.png" alt="Logos" width=25px height=25px> </div>
+			menu | warszawa | kontakt
 		</div>
 		<div class="sidebar">
 			actions
