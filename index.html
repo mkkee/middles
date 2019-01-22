@@ -14,7 +14,7 @@
 		<link rel="icon" type="image/png" href="img/middles_fav.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="img/middles_fav.png" sizes="96x96"/>
 
-		<link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
+		<xxxlink rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
 		
 		<style type="text/css">
 
@@ -85,9 +85,122 @@
 				padding-right: 10px;
 			}
 			
+		    /* Set the size of the div element that contains the map */
+  		    #map {
+				height: 100%;  /* The height is 400 pixels */
+				width: 100%; /*70%;  /* The width is the width of the web page */
+			}
 		</style>
 		
+		<script src=script/middles_data_all.js></script>
+
+		    <script>
+		//load JSON
+		var marker_table = []
+		var infowindow_table = []
+		var map;
+
+		loadJSON();
+		 function disableAllMarkers() {
+			for (m in marker_table) {
+				marker_table[m].m.setMap(null);
+			}
+		 }
+		 
+		 function enableAllMarkers() {
+			for (m in marker_table) {
+				marker_table[m].m.setMap(map);
+			}
+		 }
+		 
+		  function disableAllNonPublic() {
+			for (m in marker_table) {
+				if (marker_table[m].json_data.type == "Niepubliczna") {
+					marker_table[m].m.setMap(null);
+				}
+			}
+		 }
+
+		 function buildInfoWindowSchoolInfo(schoolJSON) {
+		  iwcontent = '<div class="ifw_container">'
+		  iwcontent = iwcontent + '<div class="ifw_title">' + schoolJSON.name +'</div>';
+		  iwcontent = iwcontent + '<div class="ifw_webpage"> <a target="_blank" href="http://' + schoolJSON.webpage +'">' + schoolJSON.webpage + '</a></div>';
+		  iwcontent = iwcontent + '</div>';
+		  console.log("ifwcontent = "+iwcontent)
+
+		  return iwcontent;
+		 }
+
+		// Initialize and add the map
+		function initMap() {
+		  // The location of Uluru
+		  console.log("in init map");
+		  var waw = {'lat': 52.229158502885544, 'lng': 21.03080616902306};
+		   // The map, centered at Waw
+		  console.log(document.getElementById('map'));
+		  
+		  map = new google.maps.Map(
+			  document.getElementById('map'), {zoom: 11, center: waw});
+			
+		  //create all markers and infowindows  
+		  console.log("Length of JSON table is: "+data_JSON_tbl.length);
+		  for (m in data_JSON_tbl) {
+			//console.log(data_JSON_tbl[m]);
+			//console.log(data_JSON_tbl[m].Geo_Location[0]);	
+			//var contentString = data_JSON_tbl[m].name;
+		  var contentString = buildInfoWindowSchoolInfo(data_JSON_tbl[m]);
+
+			//console.log(contentString);
+			var mkinfowindow = new google.maps.InfoWindow({
+				  content: contentString
+			});	
+			var marker =  new google.maps.Marker({
+				position: {lat:data_JSON_tbl[m].Geo_Location[0].lat, lng:data_JSON_tbl[m].Geo_Location[0].long},
+				map: map,
+				title: data_JSON_tbl[m].name,
+				draggable: false,
+				infowindow: mkinfowindow,
+				ifopen: false
+			})
+			var minfo = {m: marker, json_data: data_JSON_tbl[m]}
+			marker_table.push(minfo)
+			
+
+		 google.maps.event.addListener(marker, 'click', function() {	  
+			  if(this.ifopen == false) {
+				  this.infowindow.open(map, this);
+				  this.ifopen = true;
+			  } else {
+				  this.infowindow.close(map, this);
+				  this.ifopen = false;
+			  }
+			});
+			};
+		  }
+		  
+		  
+		  console.log("Length of Marker table is: "+marker_table.length);
+		 // console.log(infowindow_table[0].content)
+		  //console.log(infowindow_table[1].content)
+		  //console.log(infowindow_table[2].content)
+
+		 
+		/*  var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		  });
+			var marker = new google.maps.Marker({
+			position: waw,
+			map: map,
+			title: 'Warszawa'
+		  });
+		  marker.addListener('click', function() {
+			infowindow.open(map, marker);
+		  });*/
+		  
+		  
+		</script>
 		<script> </script>
+		
 	</head>
 <body>
 	<div class="gridcontainer">
@@ -96,14 +209,22 @@
 			menu | warszawa | kontakt
 		</div>
 		<div class="sidebar">
-			actions
+			<button onclick="disableAllMarkers();">Wyczysc</button>
+			<button onclick="enableAllMarkers();">Pokaz Wszystkie</button>
+			<button onclick="disableAllNonPublic();">Pokaz Publiczne</button>
 		</div>
 		<div class="main">
-			main
+			bla bla
+			<div id="map">
+			</div>
 		</div>
 		<div class="footer">
 			&nbsp;&nbsp;&nbsp;&nbsp;Created by AMHF. 2019. 
 		</div>
 	</div>
-</body>
+	</body>
+	
+	<script async defer
+		src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANvhY-J9fbOgp1Hh-uZzQUw1hYriVvCq0&callback=initMap'>
+	</script>
 </html>
