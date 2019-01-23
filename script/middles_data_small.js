@@ -12,11 +12,6 @@
         "webpage": "www.lo50.edu.pl",
         "Geo_Location": [
             {
-                "lat": 52.26405738995325,
-                "long": 20.981682538317177,
-                "provider": "arcgis"
-            },
-            {
                 "lat": 52.2623926,
                 "long": 21.0251540830941,
                 "provider": "osm"
