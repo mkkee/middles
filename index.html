@@ -126,6 +126,8 @@
 		  iwcontent = '<div class="ifw_container">'
 		  iwcontent = iwcontent + '<div class="ifw_title">' + schoolJSON.name +'</div>';
 		  iwcontent = iwcontent + '<div class="ifw_webpage"> <a target="_blank" href="http://' + schoolJSON.webpage +'">' + schoolJSON.webpage + '</a></div>';
+		  iwcontent = iwcontent + '<div class="ifw_patron">Patron: ' + schoolJSON.patron + '</div>';		  
+		  iwcontent = iwcontent + '<div class="ifw_address">' + schoolJSON.street + ' ' + schoolJSON.street_num + '</div>';		  
 		  iwcontent = iwcontent + '</div>';
 		  console.log("ifwcontent = "+iwcontent)
 
