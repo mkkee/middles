@@ -134,11 +134,6 @@
         "webpage": "www.37lo.edu.pl",
         "Geo_Location": [
             {
-                "lat": 52.23299145625849,
-                "long": 20.99889659732214,
-                "provider": "arcgis"
-            },
-            {
                 "lat": 52.2369621,
                 "long": 21.0190819,
                 "provider": "osm"
