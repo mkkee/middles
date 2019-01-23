@@ -4,118 +4,160 @@
 	data = (function(){ /*
 [    
     {
-        "name": "Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce Nr 3  STO",
-        "patron": "",
+        "name": "Niepubliczne Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Roberta Schumana Fundacji PRIMUS",
+        "patron": "Robert Schuman",
 		"type":"Niepubliczna",
         "city": "WARSZAWA",
-        "street": "Bia\u0142ostocka",
-        "street_num": "4",
-        "webpage": "www.3slo.pl",
+        "street": "Zoltana Balo",
+        "street_num": "1",
+        "webpage": "www.primus.com.pl",
         "Geo_Location": [
             {
-                "lat": 52.253807407149935,
-                "long": 21.037377498211008,
+                "lat": 52.13332975102442,
+                "long": 21.060731838478777,
                 "provider": "arcgis"
             },
             {
-                "lat": 52.2537369,
-                "long": 21.0375319,
+                "lat": 52.13289035,
+                "long": 21.0608709322791,
                 "provider": "osm"
             }
         ]
     },
     {
-        "name": "III Liceum Og\u00f3lnokszta\u0142c\u0105ce",
-        "patron": "gen. J\u00f3zef Sowi\u0144ski",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "Rogali\u0144ska",
-        "street_num": "2",
-        "webpage": "www.lo3.waw.ids.pl",
-        "Geo_Location": [
-            {
-                "lat": 52.230573953372954,
-                "long": 20.971309897455093,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.2306663,
-                "long": 20.9717551773571,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "XXXVIII LIceum Og\u00f3lnokszta\u0142c\u0105ce",
-        "patron": "STANIS\u0141AW KOSTKA POTOCKI",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "WIERTNICZA",
-        "street_num": "26",
-        "webpage": "WWW.KOSTKA-POTOCKI.EDU.PL",
-        "Geo_Location": [
-            {
-                "lat": 52.168815093542555,
-                "long": 21.0844152838303,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.1690433,
-                "long": 21.0847658,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "LVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
-        "patron": "Krzysztof Kamil Baczy\u0144ski",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "G\u00f3rno\u015bl\u0105ska",
-        "street_num": "31",
-        "webpage": "www.baczynski.edu.pl",
-        "Geo_Location": [
-            {
-                "lat": 52.224852616134925,
-                "long": 21.033792696231714,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.2246089,
-                "long": 21.0336716,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce LIFESKILLS Nr 1",
-        "patron": "",
+        "name": "Spo\u0142eczne Liceum Og\u00f3lokszta\u0142c\u0105ce Nr 25",
+        "patron": "Marzenna Oko\u0144ska",
 		"type":"Niepubliczna",
         "city": "WARSZAWA",
-        "street": "Ho\u017ca",
-        "street_num": "88",
-        "webpage": "www.lol1.pl",
+        "street": "Aleja Solidarno\u015bci",
+        "street_num": "101 D",
+        "webpage": "",
         "Geo_Location": [
             {
-                "lat": 52.224472194010005,
-                "long": 21.00606183735361,
+                "lat": 52.242799013589995,
+                "long": 20.996744688325865,
                 "provider": "arcgis"
             },
             {
-                "lat": 52.22452915,
-                "long": 21.0058212685947,
+                "lat": 52.2462058,
+                "long": 21.0079299,
                 "provider": "osm"
             }
         ]
     },
     {
-        "name": "I Katolickie Liceum Spo\u0142eczne",
-        "patron": "",
+        "name": "XV Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
+        "patron": "N.\u017bmichowska",
+		"type":"Publiczna",
+        "city": "WARSZAWA",
+        "street": "Klonowa",
+        "street_num": "16",
+        "webpage": "www.zmichowska.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.21260826617227,
+                "long": 21.022945317386952,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.212672,
+                "long": 21.0230746,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "XIV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
+        "patron": "Stanis\u0142aw Staszic",
+		"type":"Publiczna",
+        "city": "WARSZAWA",
+        "street": "Nowowiejska",
+        "street_num": "37a",
+        "webpage": "www.staszic.waw.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.220191528420756,
+                "long": 21.002755971550588,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.21973645,
+                "long": 21.0027743888944,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "XXIII Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Marii Sk\u0142odowskiej - Curie",
+        "patron": "Maria Sk\u0142odowska - Curie",
+		"type":"Publiczna",
+        "city": "WARSZAWA",
+        "street": "Naddnieprza\u0144ska",
+        "street_num": "2/4",
+        "webpage": "www.liceum23.waw.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.23876931943578,
+                "long": 21.126957110162323,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2386306,
+                "long": 21.1265486187423,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "XCIX Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi im. Zbigniewa Herberta",
+        "patron": "Zbigniew Herbert",
+		"type":"Publiczna",
+        "city": "WARSZAWA",
+        "street": "Fundamentowa",
+        "street_num": "38/42",
+        "webpage": "www.herbert99lo.edu.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.23836791173756,
+                "long": 21.0816953370938,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2379296,
+                "long": 21.0824045097158,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "2 Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Mi\u0119dzynarodowymi im Paw\u0142a Jasienicy STO",
+        "patron": "Pawe\u0142 Jasienica",
+		"type":"Niepubliczna",
+        "city": "WARSZAWA",
+        "street": "Nowowiejska",
+        "street_num": "5",
+        "webpage": "www.2slo.waw.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.21989050346245,
+                "long": 21.014068332361944,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.21945915,
+                "long": 21.0143601474328,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne Kolegium \u015bw. Stanis\u0142awa Kostki Katolickiego Stowarzyszenia Wychowawc\u00f3w",
+        "patron": "\u015bw. Stanis\u0142aw Kostka",
 		"type":"Niepubliczna",
         "city": "WARSZAWA",
         "street": "Bobrowiecka",
         "street_num": "9",
-        "webpage": "www.ikls.edu.pl",
+        "webpage": "www.kolegium-ksw.edu.pl",
         "Geo_Location": [
             {
                 "lat": 52.2010940291419,
@@ -130,211 +172,127 @@
         ]
     },
     {
-        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne nr76",
-        "patron": "Wis\u0142awa Szymborska",
+        "name": "Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 7",
+        "patron": "Bronis\u0142aw Geremek",
 		"type":"Niepubliczna",
         "city": "WARSZAWA",
-        "street": "Rogatkowa",
-        "street_num": "50",
-        "webpage": "www.liceum76.edu.pl",
+        "street": "Karmelicka",
+        "street_num": "26",
+        "webpage": "slo7.waw.pl",
         "Geo_Location": [
             {
-                "lat": 52.20466611740434,
-                "long": 21.162662679035023,
+                "lat": 52.25067143464705,
+                "long": 20.989555897339507,
                 "provider": "arcgis"
             },
             {
-                "lat": 52.2047008,
-                "long": 21.1629100916201,
+                "lat": 52.2507734,
+                "long": 20.9899412708056,
                 "provider": "osm"
             }
         ]
     },
     {
-        "name": "Akademickie Liceum Og\u00f3lnokszta\u0142c\u0105ce Wy\u017cszej Szko\u0142y Mened\u017cerskiej w Warszawie",
+        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 50 Stowarzyszenia Kultury i Edukacji",
         "patron": "",
 		"type":"Niepubliczna",
         "city": "WARSZAWA",
-        "street": "Kaw\u0119czy\u0144ska",
-        "street_num": "36",
-        "webpage": "www.wojnicka.edu.pl",
+        "street": "Kolektorska",
+        "street_num": "9/11",
+        "webpage": "www.skie.pl",
         "Geo_Location": [
             {
-                "lat": 52.25751894809282,
-                "long": 21.056926667089794,
+                "lat": 52.27555172133423,
+                "long": 20.96885491698902,
                 "provider": "arcgis"
             },
             {
-                "lat": 52.2571443,
-                "long": 21.0579296454963,
+                "lat": 52.2754844,
+                "long": 20.9685789325139,
                 "provider": "osm"
             }
         ]
     },
     {
-        "name": "II Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
-        "patron": "Stefan Batory",
+        "name": "XX Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Boles\u0142awa Chrobrego",
+        "patron": "Boles\u0142aw Chrobry",
 		"type":"Publiczna",
         "city": "WARSZAWA",
-        "street": "My\u015bliwiecka",
-        "street_num": "6",
-        "webpage": "http://www.batory.edu.pl",
+        "street": "Objazdowa",
+        "street_num": "3",
+        "webpage": "www.zs40.pl",
         "Geo_Location": [
             {
-                "lat": 52.22198246883794,
-                "long": 21.034309121991985,
+                "lat": 52.25783207271054,
+                "long": 21.06151910626718,
                 "provider": "arcgis"
             },
             {
-                "lat": 52.22285165,
-                "long": 21.0347710086447,
+                "lat": 52.2249059,
+                "long": 21.2099953,
                 "provider": "osm"
             }
         ]
     },
     {
-        "name": "XXV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
-        "patron": "J\u00f3zef Wybicki",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "Halna",
-        "street_num": "20",
-        "webpage": "www.wybicki.net",
-        "Geo_Location": [
-            {
-                "lat": 52.16486958670457,
-                "long": 21.200480768538227,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.16449725,
-                "long": 21.2004446734571,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "XXI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
-        "patron": "Hugo Ko\u0142\u0142\u0105taj",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "Gr\u00f3jecka",
-        "street_num": "93",
-        "webpage": "www.liceum21.waw.ids.pl",
-        "Geo_Location": [
-            {
-                "lat": 52.21033433885414,
-                "long": 20.97621147997511,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.2098787,
-                "long": 20.9778124627466,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "XCIV Liceum Og\u00f3lnokszta\u0142c\u0105ce im. gen. St.Maczka",
-        "patron": "gen Stanis\u0142aw Maczek",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "Gwia\u017adzista",
-        "street_num": "35",
-        "webpage": "www.maczek.waw.pl",
-        "Geo_Location": [
-            {
-                "lat": 52.28585650712645,
-                "long": 20.977182876882868,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.2863904,
-                "long": 20.9774411,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "CLX Liceum Og\u00f3lnokszta\u0142cace im. gen. dyw. Stefana Roweckiego Grota",
-        "patron": "gen.dyw. Stefan Rowecki Grot",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "Siemie\u0144skiego",
-        "street_num": "6",
-        "webpage": "www.160lo.pl",
-        "Geo_Location": [
-            {
-                "lat": 52.20631497169482,
-                "long": 20.976172476946275,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.20673615,
-                "long": 20.9749547850975,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "LXXXVI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
-        "patron": "Batalion Zo\u015bka",
-		"type":"Publiczna",
-        "city": "WARSZAWA",
-        "street": "Kajetana Garbi\u0144skiego",
-        "street_num": "1",
-        "webpage": "www.zoska.waw.pl",
-        "Geo_Location": [
-            {
-                "lat": 52.23502743435862,
-                "long": 20.944046615990715,
-                "provider": "arcgis"
-            },
-            {
-                "lat": 52.23507145,
-                "long": 20.9436939400394,
-                "provider": "osm"
-            }
-        ]
-    },
-    {
-        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne nr 29",
-        "patron": "Ignacy Jan Paderewski",
+        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne Nr 27 Szko\u0142a Rodzinna",
+        "patron": "",
 		"type":"Niepubliczna",
         "city": "WARSZAWA",
-        "street": "Powazkowska",
-        "street_num": "90",
-        "webpage": "www.lon29.prv.pl",
+        "street": "Kruszyny",
+        "street_num": "28",
+        "webpage": "szkolarodzinna.pl",
         "Geo_Location": [
             {
-                "lat": 52.262322681545186,
-                "long": 20.954180721256957,
+                "lat": 52.21727747735032,
+                "long": 21.216485640573648,
                 "provider": "arcgis"
             },
             {
-                "lat": 52.26190825,
-                "long": 20.9510809465854,
+                "lat": 52.21686045,
+                "long": 21.21624347443,
                 "provider": "osm"
             }
         ]
     },
     {
-        "name": "LXXXVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
-        "patron": "Micha\u0142 Konarski",
-		"type":"Publiczna",
+        "name": "Katolickie Liceum Og\u00f3lnokszta\u0142c\u0105ce",
+        "patron": "\u015bw. Pawe\u0142 z Tarsu",
+		"type":"Niepubliczna",
         "city": "WARSZAWA",
-        "street": "Okopowa",
-        "street_num": "55a",
-        "webpage": "www.konar.info",
+        "street": "Poezji",
+        "street_num": "19",
+        "webpage": "kulszkola.pl",
         "Geo_Location": [
             {
-                "lat": 52.248573177909854,
-                "long": 20.97896755340772,
+                "lat": 52.21905972880741,
+                "long": 21.24830210493953,
                 "provider": "arcgis"
             },
             {
-                "lat": 52.24836835,
-                "long": 20.9767648274455,
+                "lat": 52.15733785,
+                "long": 21.202308340258,
+                "provider": "osm"
+            }
+        ]
+    },
+    {
+        "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Szko\u0142a Lider\u00f3w",
+        "patron": "",
+		"type":"Niepubliczna",
+        "city": "WARSZAWA",
+        "street": "Bobrowiecka",
+        "street_num": "9",
+        "webpage": "",
+        "Geo_Location": [
+            {
+                "lat": 52.2010940291419,
+                "long": 21.046111943360973,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2021026,
+                "long": 21.0461782,
                 "provider": "osm"
             }
         ]
