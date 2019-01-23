@@ -26,14 +26,15 @@
 			.sidebar {grid-area: sidebar;}
 			.main {grid-area: main;}
 			.footer {grid-area: footer;}
+			.ads {grid-area: ads;}
 			
 			.gridcontainer {
 				display: grid;
-				grid-template-areas: "menu menu"
-									 "sidebar main"
-									 "footer footer";
+				grid-template-areas: "menu menu ads"
+									 "sidebar main ads"
+									 "footer footer footer";
 				min-height: 100vh;
-				grid-template-columns: 150px 1fr;
+				grid-template-columns: 150px 1fr 200px;
 				grid-template-rows: 35px 1fr 20px;
 				align-items: stretch;
 			}
@@ -43,12 +44,13 @@
 					grid-template-areas: "menu"
 										 "sidebar"
 										 "main"
+										 "ads"
 										 "footer";
 					grid-template-columns: 100%;
 					grid-template-rows: 40px 
 										200px 
 										200fr
-										1fr 
+										100fr 
 										40px;
 				}
 			}
@@ -60,13 +62,25 @@
 					grid-template-areas: "menu"
 										 "sidebar"
 										 "main"
+										 "ads"
 										 "footer";
 					grid-template-columns: 100%;
 					grid-template-rows: 40px 
 										200px 
 										200fr
-										1fr 
+										100fr 
 										40px;
+				}
+				.menu {
+					font-size: 2em;
+				}
+
+				.sidebar {
+					font-size: 2em;
+					#background-color: #ccdefc;
+				}
+				.button {
+					font-size: 32px;	
 				}
 			}
 
@@ -233,6 +247,14 @@
 		  
 		  
 		</script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-4261661214028769",
+		    enable_page_level_ads: true
+		  });
+		</script>
+
 		<script> </script>
 		
 	</head>
@@ -243,14 +265,16 @@
 			menu | warszawa | kontakt
 		</div>
 		<div class="sidebar">
-			<button onclick="disableAllMarkers();">Wyczysc</button>
-			<button onclick="enableAllMarkers();">Pokaz Wszystkie</button>
-			<button onclick="disableAllNonPublic();">Pokaz Publiczne</button>
-			<button onclick="disableAllNonRnk();">Pokaz z Rankingiem</button>
+			<button class="button" onclick="disableAllMarkers();">Wyczysc</button>
+			<button class="button" onclick="enableAllMarkers();">Pokaz Wszystkie</button>
+			<button class="button" onclick="disableAllNonPublic();">Pokaz Publiczne</button>
+			<button class="button" onclick="disableAllNonRnk();">Pokaz z Rankingiem</button>
 		</div>
 		<div class="main">
 			<div id="map">
 			</div>
+		</div>
+		<div class="ads">
 		</div>
 		<div class="footer">
 			&nbsp;&nbsp;&nbsp;&nbsp;Created by AMHF. 2019. 
