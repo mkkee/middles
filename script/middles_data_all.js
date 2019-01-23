@@ -22,7 +22,14 @@
                 "long": 21.03975255,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXIV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -38,7 +45,14 @@
                 "long": 20.96194497651359,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 10,
+            "2018": 7,
+            "2017": 7,
+            "2016": 5,
+            "2015": 8
+        }
     },
     {
         "name": "XXXIX Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -54,7 +68,14 @@
                 "long": 20.9546698,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CXIV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -70,7 +91,14 @@
                 "long": 20.98875912733034,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXXV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -91,7 +119,14 @@
                 "long": 21.0462214,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Prywatne Liceum Og\u00f3lnokszta\u0142c\u0105ce Si\u00f3str Nazaretanek z Oddzia\u0142ami Mi\u0119dzynarodowymi",
@@ -107,7 +142,14 @@
                 "long": 21.047476449737623,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXXVII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -123,7 +165,14 @@
                 "long": 21.0190819,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 17,
+            "2018": 25,
+            "2017": 22,
+            "2016": 24,
+            "2015": 19
+        }
     },
     {
         "name": "Liceum Filmowe z Oddzia\u0142ami Dwuj\u0119zycznymi przy Warszawskiej Szkole Filmowej",
@@ -139,7 +188,14 @@
                 "long": 20.9913579141181,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Brytyjskie Liceum Og\u00f3lnokszta\u0142c\u0105ce The British School",
@@ -155,7 +211,14 @@
                 "long": 21.055123729932582,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXII Liceum Og\u00f3lnokszta\u0142c\u0105ce Mistrzostwa Sprotowego",
@@ -171,7 +234,14 @@
                 "long": 21.003596155375742,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Autorskie Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne nr 42",
@@ -187,7 +257,14 @@
                 "long": 21.0406335230769,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "X Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Kr\u00f3lowej Jadwigi",
@@ -203,7 +280,14 @@
                 "long": 21.0229788661855,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CLVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -219,7 +303,14 @@
                 "long": 21.0541197339695,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XIX Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -240,7 +331,14 @@
                 "long": 21.0713664923779,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Sportowe Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 67 MGM",
@@ -256,7 +354,14 @@
                 "long": 21.0061601715745,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LI Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Tadeusza Ko\u015bciuszki",
@@ -272,7 +377,14 @@
                 "long": 21.167830430954396,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CXIX Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -288,7 +400,14 @@
                 "long": 20.9992929,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CX Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -304,7 +423,14 @@
                 "long": 21.056443026834234,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XVII Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -325,7 +451,14 @@
                 "long": 21.0012827741198,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 15,
+            "2018": 12,
+            "2017": 13,
+            "2016": 15,
+            "2015": 15
+        }
     },
     {
         "name": "\u017bagle Liceum Og\u00f3lnokszta\u0142c\u0105ce Stowarzyszenia STERNIK",
@@ -346,7 +479,14 @@
                 "long": 21.1739545107283,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLVII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -367,7 +507,14 @@
                 "long": 21.0791770123175,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXXXI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -383,7 +530,14 @@
                 "long": 20.9915,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "PRYWATNE LO ZGROMADZENIA SI\u00d3STR ZMARTWYCHWSTANIA PA\u0143SKIEGO",
@@ -404,7 +558,14 @@
                 "long": 20.9767734,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXIX Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Integracyjnymi",
@@ -420,7 +581,14 @@
                 "long": 20.9661393795819,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Spo\u0142eczne nr 17",
@@ -436,7 +604,14 @@
                 "long": 21.00506162738766,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "21 Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Jerzego Grotowskiego",
@@ -452,7 +627,14 @@
                 "long": 20.995209491545893,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LII Liceum Og\u00f3lnokszta\u0142cace",
@@ -468,7 +650,14 @@
                 "long": 20.9395298993381,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Niepubliczne Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 81 SGH",
@@ -489,7 +678,14 @@
                 "long": 21.0084341,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XCII Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Integracyjnymi",
@@ -510,7 +706,14 @@
                 "long": 20.9491362,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Niepubliczne Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -531,7 +734,14 @@
                 "long": 20.9813662742022,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "VII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -547,7 +757,14 @@
                 "long": 20.9959536103471,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 14,
+            "2018": 21,
+            "2017": 19,
+            "2016": 17,
+            "2015": 23
+        }
     },
     {
         "name": "XVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -563,7 +780,14 @@
                 "long": 21.0232872,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 12,
+            "2018": 17,
+            "2017": 12,
+            "2016": 14,
+            "2015": 16
+        }
     },
     {
         "name": "LXXXIV Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Bohater\u00f3w Narwiku",
@@ -579,7 +803,14 @@
                 "long": 20.959735051935837,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLVIII LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE",
@@ -595,7 +826,14 @@
                 "long": 20.968566182064805,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XI Liceum Og\u00f3lnokszta\u0142\u0105ce",
@@ -611,7 +849,14 @@
                 "long": 21.0114435658854,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "VIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -632,7 +877,14 @@
                 "long": 21.0334364,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 2,
+            "2018": 3,
+            "2017": 4,
+            "2016": 3,
+            "2015": 2
+        }
     },
     {
         "name": "LXXVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -653,7 +905,14 @@
                 "long": 20.9185459157117,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "PRYWATNE LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE NR 32 IM. JEANA MONNETA",
@@ -669,11 +928,18 @@
                 "long": 21.017570286283146,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CXXII LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE",
-        "patron": "IGNACY DOMEYKO",
+        "patron": "Ignacy Domeyko",
         "type": "Publiczna",
         "city": "WARSZAWA",
         "street": "Staffa",
@@ -690,7 +956,14 @@
                 "long": 20.9614973,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 20,
+            "2018": 20,
+            "2017": 17,
+            "2016": 18,
+            "2015": 14
+        }
     },
     {
         "name": "XIII Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -711,7 +984,14 @@
                 "long": 21.0418744382066,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -732,7 +1012,14 @@
                 "long": 20.9704975,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXXVI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -748,7 +1035,14 @@
                 "long": 21.040294020370666,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "VI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -764,7 +1058,14 @@
                 "long": 21.015161514138253,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 16,
+            "2018": 16,
+            "2017": 16,
+            "2016": 13,
+            "2015": 11
+        }
     },
     {
         "name": "LXXX Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Leopolda Staffa",
@@ -780,7 +1081,14 @@
                 "long": 21.0141304341892,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Multimedia",
@@ -796,7 +1104,14 @@
                 "long": 21.006901043424392,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -812,7 +1127,14 @@
                 "long": 20.9802788893663,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XCVII Liceum Og\u00f3lnokszta\u0142c\u0105ce im.Olimpijczyk\u00f3w Polskich",
@@ -833,7 +1155,14 @@
                 "long": 21.0772000158853,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Mi\u0119dzynarodowe Liceum Og\u00f3lnokszta\u0142c\u0105ce Meridian",
@@ -854,7 +1183,14 @@
                 "long": 20.960492,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "I Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Integracyjnymi im. Boles\u0142awa Limanowskiego",
@@ -875,7 +1211,14 @@
                 "long": 20.9874844,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "International American School Sp. z o.o. Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne Nr 72 I.A.S",
@@ -896,7 +1239,14 @@
                 "long": 21.0732950130365,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Niepubliczne Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -912,7 +1262,14 @@
                 "long": 21.06867421137959,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLII LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE IM. MARII KONOPNICKIEJ",
@@ -928,7 +1285,14 @@
                 "long": 21.0177145119791,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXXV Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi im. Boles\u0142awa Prusa",
@@ -949,7 +1313,14 @@
                 "long": 21.0522527,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Jana Kochanowskiego",
@@ -965,7 +1336,14 @@
                 "long": 21.004083088406652,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 18,
+            "2018": 13,
+            "2017": 18,
+            "2016": 11,
+            "2015": 12
+        }
     },
     {
         "name": "V Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -981,7 +1359,14 @@
                 "long": 20.995558010531575,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 7,
+            "2018": 10,
+            "2017": 8,
+            "2016": 10,
+            "2015": 13
+        }
     },
     {
         "name": "NOVA LICEUM OGOLNOKSZTACACE KLUCZOWYCH KOMPETENCJI MODZIE\u017bY",
@@ -1002,7 +1387,14 @@
                 "long": 21.0151058,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 4 imienia Batalionu AK Parasol w Warszawie",
@@ -1023,7 +1415,14 @@
                 "long": 21.0404022,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 11,
+            "2018": 11,
+            "2017": 11,
+            "2016": 22,
+            "2015": 10
+        }
     },
     {
         "name": "Prywatne Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Zofii i J\u0119drzeja Moraczewskich",
@@ -1039,7 +1438,14 @@
                 "long": 21.254466642910906,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXX Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1055,7 +1461,14 @@
                 "long": 21.0340932896763,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXII LO z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -1076,7 +1489,14 @@
                 "long": 20.948327595812,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CXI LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE Z ODDZIA\u0141AMI INTEGRACYJNYMI",
@@ -1097,7 +1517,14 @@
                 "long": 21.0873946084198,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXVI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1113,7 +1540,14 @@
                 "long": 21.169120441860414,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1129,7 +1563,14 @@
                 "long": 21.040948499019063,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Wielokulturowe Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Jacka Kuronia",
@@ -1150,7 +1591,14 @@
                 "long": 21.0356824,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CXXXVII Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -1166,7 +1614,14 @@
                 "long": 21.0451951,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XII Liceum Og\u00f3lnokszta\u0142cace",
@@ -1182,7 +1637,14 @@
                 "long": 20.9990018368459,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Niepubliczne Liceum Og\u00f3lnokszta\u0142c\u0105ce Nr 61 im. Stefana Kisielewskiego",
@@ -1198,7 +1660,14 @@
                 "long": 21.0657662473481,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce Nr 3  STO",
@@ -1219,7 +1688,14 @@
                 "long": 21.0375319,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "III Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1235,7 +1711,14 @@
                 "long": 20.971309897455093,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXXVIII LIceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1251,7 +1734,14 @@
                 "long": 21.0847658,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1272,7 +1762,14 @@
                 "long": 21.0336716,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce LIFESKILLS Nr 1",
@@ -1293,7 +1790,14 @@
                 "long": 21.0058212685947,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "I Katolickie Liceum Spo\u0142eczne",
@@ -1309,7 +1813,14 @@
                 "long": 21.046111943360973,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne nr76",
@@ -1330,7 +1841,14 @@
                 "long": 21.1629100916201,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Akademickie Liceum Og\u00f3lnokszta\u0142c\u0105ce Wy\u017cszej Szko\u0142y Mened\u017cerskiej w Warszawie",
@@ -1346,7 +1864,14 @@
                 "long": 21.056926667089794,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "II Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -1362,7 +1887,14 @@
                 "long": 21.0347710086447,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 3,
+            "2018": 2,
+            "2017": 5,
+            "2016": 4,
+            "2015": 5
+        }
     },
     {
         "name": "XXV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1383,7 +1915,14 @@
                 "long": 21.2004446734571,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1399,7 +1938,14 @@
                 "long": 20.9778124627466,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XCIV Liceum Og\u00f3lnokszta\u0142c\u0105ce im. gen. St.Maczka",
@@ -1415,7 +1961,14 @@
                 "long": 20.9774411,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CLX Liceum Og\u00f3lnokszta\u0142cace im. gen. dyw. Stefana Roweckiego Grota",
@@ -1431,7 +1984,14 @@
                 "long": 20.976172476946275,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXXXVI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1452,7 +2012,14 @@
                 "long": 20.9436939400394,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne nr 29",
@@ -1468,7 +2035,14 @@
                 "long": 20.9510809465854,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXXXVIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1484,7 +2058,14 @@
                 "long": 20.97896755340772,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CII Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Integracyjnymi",
@@ -1505,7 +2086,14 @@
                 "long": 21.0238603170236,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1526,7 +2114,14 @@
                 "long": 21.0809772,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CLVII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1542,7 +2137,14 @@
                 "long": 21.011847426635,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLVI Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -1563,7 +2165,14 @@
                 "long": 21.044339783436,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Publiczne Liceum Og\u00f3lnokszta\u0142c\u0105ce im. b\u0142. ks. Romana Archutowskiego",
@@ -1584,7 +2193,14 @@
                 "long": 20.9586906,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne nr 40",
@@ -1600,7 +2216,14 @@
                 "long": 21.0474129320703,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1616,7 +2239,14 @@
                 "long": 20.9532725,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XCVI Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1632,7 +2262,14 @@
                 "long": 21.0673698,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLIV Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Antoniego Dobiszewskiego",
@@ -1648,7 +2285,14 @@
                 "long": 21.032707279492,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "KATOLICKIE LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE IM. B\u0141. KS. ROMANA ARCHUTOWSKIEGO",
@@ -1669,7 +2313,14 @@
                 "long": 20.9586906,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LX Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Wojciecha G\u00f3rskiego",
@@ -1685,7 +2336,14 @@
                 "long": 20.9322197,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CLIX Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Kr\u00f3la Jana III Sobieskiego",
@@ -1706,7 +2364,14 @@
                 "long": 20.9102023063339,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "IV Liceum Og\u00f3lnokszta\u0142c\u0105ce im. A. Mickiewicza w Warszawie",
@@ -1722,7 +2387,14 @@
                 "long": 21.0603175667846,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CLV Liceum OG\u00f3lnokszta\u0142cace z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -1738,7 +2410,14 @@
                 "long": 21.0263280138233,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLIII LICEUM OG\u00d3LNOKSZTA\u0141CACE",
@@ -1754,7 +2433,14 @@
                 "long": 21.0081229976305,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CXXV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1775,7 +2461,14 @@
                 "long": 20.9862523571713,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXXXIII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1796,7 +2489,14 @@
                 "long": 21.0215770950687,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LIX Liceum Og\u00f3lnokszta\u0142c\u0105ce Mistrzostwa Sportowego im. Janusza Kusoci\u0144skiego",
@@ -1812,7 +2512,14 @@
                 "long": 20.9445488,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Mi\u0119dzynarodowe Liceum Montessori w Warszawie (International Montessori High School of Warsaw)",
@@ -1828,7 +2535,14 @@
                 "long": 21.019649223007693,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XVI LO z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -1844,7 +2558,14 @@
                 "long": 20.97660185746447,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Polonijne Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne KLASYK",
@@ -1860,7 +2581,14 @@
                 "long": 21.0850452,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXV Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Integracyjnymi",
@@ -1876,7 +2604,14 @@
                 "long": 20.9981009332432,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXXIV Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
@@ -1897,7 +2632,14 @@
                 "long": 21.0403255,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "IX Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Klementny Hoffmanowej w Warszawie",
@@ -1918,7 +2660,14 @@
                 "long": 21.0058212685947,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 6,
+            "2018": 8,
+            "2017": 9,
+            "2016": 8,
+            "2015": 9
+        }
     },
     {
         "name": "XXIV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1934,7 +2683,14 @@
                 "long": 20.95481794310118,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 13",
@@ -1950,7 +2706,14 @@
                 "long": 20.92759920604215,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXVII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -1971,7 +2734,14 @@
                 "long": 21.0193869044163,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 8,
+            "2018": 4,
+            "2017": 6,
+            "2016": 7,
+            "2015": 3
+        }
     },
     {
         "name": "LVI Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Leona Kruczkowskiego",
@@ -1987,7 +2757,14 @@
                 "long": 20.8988271033959,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XLIX LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE Z ODDZIA\u0141AMI DWUJ\u0118ZYCZNYMI",
@@ -2003,7 +2780,14 @@
                 "long": 21.00997644797728,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXX Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -2024,7 +2808,14 @@
                 "long": 20.9835030455837,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "L Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Integracyjnymi",
@@ -2040,7 +2831,14 @@
                 "long": 21.0251540830941,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "CLVI Liceum Og\u00f3lnokszta\u0142c\u0105ce Integracyjne",
@@ -2056,7 +2854,14 @@
                 "long": 21.03993836081136,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "I Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -2072,7 +2877,14 @@
                 "long": 20.959726887731566,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXVIII LICEUM OG\u00d3LNOKSZTA\u0141C\u0104CE IM TYTUSA CHA\u0141UBI\u0143SKIEGO",
@@ -2093,7 +2905,14 @@
                 "long": 21.0151901307392,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "I Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce im. E. Bu\u0142haka w Weso\u0142ej",
@@ -2114,7 +2933,14 @@
                 "long": 21.2167880181469,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Waldorfske Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 1",
@@ -2130,7 +2956,14 @@
                 "long": 20.9681382,
                 "provider": "google"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "LXXII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -2146,7 +2979,14 @@
                 "long": 21.0538734085068,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XXXIII Liceum Og\u00f3lnokszta\u0142c\u0105ce Dwuj\u0119zyczne",
@@ -2162,7 +3002,14 @@
                 "long": 20.959112534017986,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 9,
+            "2018": 9,
+            "2017": 10,
+            "2016": 9,
+            "2015": 7
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne Nr 43",
@@ -2178,7 +3025,14 @@
                 "long": 20.9180574,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Przymierza Rodzin im. Jana Paw\u0142a II",
@@ -2194,7 +3048,14 @@
                 "long": 21.0563163,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Niepubliczne Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Roberta Schumana Fundacji PRIMUS",
@@ -2210,7 +3071,14 @@
                 "long": 21.0608709322791,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Spo\u0142eczne Liceum Og\u00f3lokszta\u0142c\u0105ce Nr 25",
@@ -2226,11 +3094,18 @@
                 "long": 20.996744688325865,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XV Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi",
-        "patron": "N.\u017bmichowska",
+        "patron": "Narcyza \u017bmichowska",
         "type": "Publiczna",
         "city": "WARSZAWA",
         "street": "Klonowa",
@@ -2247,7 +3122,14 @@
                 "long": 21.0230746,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 19,
+            "2018": 14,
+            "2017": 15,
+            "2016": 12,
+            "2015": 18
+        }
     },
     {
         "name": "XIV Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -2268,7 +3150,14 @@
                 "long": 21.0027743888944,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 1,
+            "2018": 1,
+            "2017": 1,
+            "2016": 1,
+            "2015": 1
+        }
     },
     {
         "name": "XXIII Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Marii Sk\u0142odowskiej - Curie",
@@ -2284,7 +3173,14 @@
                 "long": 21.1265486187423,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XCIX Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Dwuj\u0119zycznymi im. Zbigniewa Herberta",
@@ -2300,7 +3196,14 @@
                 "long": 21.0816953370938,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "2 Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Mi\u0119dzynarodowymi im Paw\u0142a Jasienicy STO",
@@ -2316,7 +3219,14 @@
                 "long": 21.0143601474328,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 5,
+            "2018": 5,
+            "2017": 2,
+            "2016": 2,
+            "2015": 6
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne Kolegium \u015bw. Stanis\u0142awa Kostki Katolickiego Stowarzyszenia Wychowawc\u00f3w",
@@ -2332,7 +3242,14 @@
                 "long": 21.0461782,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Spo\u0142eczne Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 7",
@@ -2353,7 +3270,14 @@
                 "long": 20.9899412708056,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce nr 50 Stowarzyszenia Kultury i Edukacji",
@@ -2374,7 +3298,14 @@
                 "long": 20.9685789325139,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "XX Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Boles\u0142awa Chrobrego",
@@ -2390,7 +3321,14 @@
                 "long": 21.06151910626718,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Niepubliczne Nr 27 Szko\u0142a Rodzinna",
@@ -2406,7 +3344,14 @@
                 "long": 21.216485640573648,
                 "provider": "arcgis"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Katolickie Liceum Og\u00f3lnokszta\u0142c\u0105ce",
@@ -2422,7 +3367,14 @@
                 "long": 21.202308340258,
                 "provider": "osm"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
     },
     {
         "name": "Liceum Og\u00f3lnokszta\u0142c\u0105ce Szko\u0142a Lider\u00f3w",
@@ -2435,10 +3387,63 @@
         "Geo_Location": [
             {
                 "lat": 52.1999747,
-                "long": 21.044040,
+                "long": 21.04404,
                 "provider": "google"
             }
-        ]
+        ],
+        "Ranking_Perspektyw": {
+            "2019": "",
+            "2018": "",
+            "2017": "",
+            "2016": "",
+            "2015": ""
+        }
+    },
+   {
+        "name": "XXVII Liceum Og\u00f3lnokszta\u0142c\u0105ce",
+        "patron": "Tadeusz Czacki",
+        "type": "Publiczna",
+        "city": "WARSZAWA",
+        "street": "Polna",
+        "street_num": "5",
+        "webpage": "czacki.edu.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.2151576,
+                "long": 21.0186636,
+                "provider": "google"
+            }
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 4,
+            "2018": 6,
+            "2017": 3,
+            "2016": 6,
+            "2015": 4
+        }
+    },
+   {
+        "name": "XL Liceum Og\u00f3lnokszta\u0142c\u0105ce im. Stefana \u017beromskiego",
+        "patron": "Stefan \u017beromski",
+        "type": "Publiczna",
+        "city": "WARSZAWA",
+        "street": "Platynowa",
+        "street_num": "1",
+        "webpage": "zerowmski.waw.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.2267583,
+                "long": 20.9903905,
+                "provider": "google"
+            }
+        ],
+        "Ranking_Perspektyw": {
+            "2019": 13,
+            "2018": 19,
+            "2017": 14,
+            "2016": 16,
+            "2015": 17
+        }
     }
 ]
 */}).toString().split('\n').slice(1, -1).join('\n');

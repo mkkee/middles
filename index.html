@@ -114,7 +114,7 @@
 			}
 		 }
 		 
-		  function disableAllNonPublic() {
+		function disableAllNonPublic() {
 			for (m in marker_table) {
 				if (marker_table[m].json_data.type == "Niepubliczna") {
 					marker_table[m].m.setMap(null);
@@ -122,12 +122,25 @@
 			}
 		 }
 
+		function disableAllNonRnk() {
+			for (m in marker_table) {
+				if (marker_table[m].json_data.Ranking_Perspektyw[2019] == "") {
+					marker_table[m].m.setMap(null);
+				} else {
+					marker_table[m].m.set('label', marker_table[m].json_data.Ranking_Perspektyw[2019]);					
+				}
+			}
+		 }
+
+
 		 function buildInfoWindowSchoolInfo(schoolJSON) {
 		  iwcontent = '<div class="ifw_container">'
 		  iwcontent = iwcontent + '<div class="ifw_title">' + schoolJSON.name +'</div>';
 		  iwcontent = iwcontent + '<div class="ifw_webpage"> <a target="_blank" href="http://' + schoolJSON.webpage +'">' + schoolJSON.webpage + '</a></div>';
 		  iwcontent = iwcontent + '<div class="ifw_patron">Patron: ' + schoolJSON.patron + '</div>';		  
-		  iwcontent = iwcontent + '<div class="ifw_address">' + schoolJSON.street + ' ' + schoolJSON.street_num + '</div>';		  
+		  iwcontent = iwcontent + '<div class="ifw_address">' + schoolJSON.street + ' ' + schoolJSON.street_num + '</div>';	
+		  console.log(schoolJSON);	  
+		  iwcontent = iwcontent + '<div class="ifw_rnk_perspektywy">2019: ' + schoolJSON.Ranking_Perspektyw[2019] + ' 2018: ' + schoolJSON.Ranking_Perspektyw[2018] + ' 2017: ' + schoolJSON.Ranking_Perspektyw[2017]+ ' 2016: ' + schoolJSON.Ranking_Perspektyw[2016]+ ' 2015: ' + schoolJSON.Ranking_Perspektyw[2015]+ '</div>';		  
 		  iwcontent = iwcontent + '</div>';
 		  console.log("ifwcontent = "+iwcontent)
 
@@ -215,6 +228,7 @@
 			<button onclick="disableAllMarkers();">Wyczysc</button>
 			<button onclick="enableAllMarkers();">Pokaz Wszystkie</button>
 			<button onclick="disableAllNonPublic();">Pokaz Publiczne</button>
+			<button onclick="disableAllNonRnk();">Pokaz z Rankingiem</button>
 		</div>
 		<div class="main">
 			<div id="map">
