@@ -2,7 +2,28 @@
 
     function loadJSON(callback) {   
 	data = (function(){ /*
-[    {
+[        {
+        "name": "L Liceum Og\u00f3lnokszta\u0142c\u0105ce z Oddzia\u0142ami Integracyjnymi",
+        "patron": "Ruy Barbosy",
+		"type":"Publiczna",
+        "city": "WARSZAWA",
+        "street": "Burdzi\u0144skiego",
+        "street_num": "4",
+        "webpage": "www.lo50.edu.pl",
+        "Geo_Location": [
+            {
+                "lat": 52.26405738995325,
+                "long": 20.981682538317177,
+                "provider": "arcgis"
+            },
+            {
+                "lat": 52.2623926,
+                "long": 21.0251540830941,
+                "provider": "osm"
+            }
+        ]
+    },
+{
         "name": "Bednarska Szko\u0142a Realna",
         "patron": "",
 		"type":"Niepubliczna",
