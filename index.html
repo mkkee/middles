@@ -116,6 +116,10 @@
 				padding-left: 10px;
 				padding-right: 10px;
 			}
+
+			.ifw_title {
+				font-weight: bold;
+			}
 			
 		    /* Set the size of the div element that contains the map */
   		    #map {
@@ -132,6 +136,10 @@
 		var marker_table = []
 		var infowindow_table = []
 		var map;
+		var homeMarker = {m : '', isPlaced: false}; //will store home marker location
+
+		//homeMarker.isPlaced = false;
+
 
 		loadJSON();
 		 function disableAllMarkers() {
@@ -159,9 +167,14 @@
 				if (marker_table[m].json_data.Ranking_Perspektyw[2019] == "") {
 					marker_table[m].m.setMap(null);
 				} else {
-					marker_table[m].m.set('label', marker_table[m].json_data.Ranking_Perspektyw[2019]);					
+					//marker_table[m].m.set('label', marker_table[m].json_data.Ranking_Perspektyw[2019]);	
+					//marker_table[m].m.infowindow.setContent(marker_table[m].m.infowindow.content + 'AAAAAAA')				
 				}
 			}
+		 }
+
+		 function printHomeLoc() {
+		 	console.log(homeMarker.m.getPosition().toJSON());
 		 }
 
 
@@ -171,10 +184,10 @@
 		  iwcontent = iwcontent + '<div class="ifw_webpage"> <a target="_blank" href="http://' + schoolJSON.webpage +'">' + schoolJSON.webpage + '</a></div>';
 		  iwcontent = iwcontent + '<div class="ifw_patron">Patron: ' + schoolJSON.patron + '</div>';		  
 		  iwcontent = iwcontent + '<div class="ifw_address">' + schoolJSON.street + ' ' + schoolJSON.street_num + '</div>';	
-		  console.log(schoolJSON);	  
+		  //console.log(schoolJSON);	  
 		  iwcontent = iwcontent + '<div class="ifw_rnk_perspektywy">2019: ' + schoolJSON.Ranking_Perspektyw[2019] + ' 2018: ' + schoolJSON.Ranking_Perspektyw[2018] + ' 2017: ' + schoolJSON.Ranking_Perspektyw[2017]+ ' 2016: ' + schoolJSON.Ranking_Perspektyw[2016]+ ' 2015: ' + schoolJSON.Ranking_Perspektyw[2015]+ '</div>';		  
 		  iwcontent = iwcontent + '</div>';
-		  console.log("ifwcontent = "+iwcontent)
+		  //console.log("ifwcontent = "+iwcontent)
 
 		  return iwcontent;
 		 }
@@ -182,10 +195,10 @@
 		// Initialize and add the map
 		function initMap() {
 		  // The location of Uluru
-		  console.log("in init map");
+		  //console.log("in init map");
 		  var waw = {'lat': 52.229158502885544, 'lng': 21.03080616902306};
 		   // The map, centered at Waw
-		  console.log(document.getElementById('map'));
+		  //console.log(document.getElementById('map'));
 		  
 		  map = new google.maps.Map(
 			  document.getElementById('map'), {zoom: 11, center: waw});
@@ -208,15 +221,20 @@
 				title: data_JSON_tbl[m].name,
 				draggable: false,
 				infowindow: mkinfowindow,
-				ifopen: false
+				ifopen: false,
+				label: data_JSON_tbl[m].Ranking_Perspektyw[2019].toString()
 			})
+
+			//console.log(data_JSON_tbl[m].Ranking_Perspektyw[2019])
+
 			var minfo = {m: marker, json_data: data_JSON_tbl[m]}
 			marker_table.push(minfo)
 			
 
-		 google.maps.event.addListener(marker, 'click', function() {	  
+		google.maps.event.addListener(marker, 'click', function() {	  
 			  if(this.ifopen == false) {
 				  this.infowindow.open(map, this);
+				  //this.infowindow.setContent(this.infowindow.content + 'AAAAAAA')
 				  this.ifopen = true;
 			  } else {
 				  this.infowindow.close(map, this);
@@ -224,7 +242,38 @@
 			  }
 			});
 			};
-		  }
+
+		map.addListener('click', function(e) {
+    		placeHomeMarker(e.latLng, map);
+  		});
+
+  		function placeHomeMarker(latLng, map) {
+		  	console.log("in click listener")
+		  	if(homeMarker.isPlaced) {
+		  		console.log('old position');
+		  		console.log(homeMarker.m.getPosition().toJSON());
+		  		console.log(latLng.toJSON());
+
+		  		homeMarker.m.setPosition(latLng);
+		  		homeMarker.m.setMap(null);
+		  		homeMarker.m.setMap(map);
+		  		//homeMarker.isPlaced = false;
+		  		
+		  	} else {
+			  	var marker = new google.maps.Marker({
+			    	position: latLng,
+			    	map: map,
+			    	icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+			    	title: 'Home',
+			    	draggable: true
+			  	});
+			  	console.log(latLng.lat(), latLng.lng());
+			  	homeMarker.m = marker;
+			  	homeMarker.isPlaced = true;
+		  	}
+		}
+
+		}
 		  
 		  
 		  console.log("Length of Marker table is: "+marker_table.length);
@@ -247,7 +296,7 @@
 		  
 		  
 		</script>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
 		    google_ad_client: "ca-pub-4261661214028769",
@@ -269,6 +318,9 @@
 			<button class="button" onclick="enableAllMarkers();">Pokaz Wszystkie</button>
 			<button class="button" onclick="disableAllNonPublic();">Pokaz Publiczne</button>
 			<button class="button" onclick="disableAllNonRnk();">Pokaz z Rankingiem</button>
+			<!--
+			<button class="button" onclick="printHomeLoc();">Home</button>
+			-->
 		</div>
 		<div class="main">
 			<div id="map">
