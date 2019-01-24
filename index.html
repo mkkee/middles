@@ -34,7 +34,7 @@
 									 "sidebar main ads"
 									 "footer footer footer";
 				min-height: 100vh;
-				grid-template-columns: 150px 1fr 200px;
+				grid-template-columns: 250px 1fr 200px;
 				grid-template-rows: 35px 1fr 20px;
 				align-items: stretch;
 			}
@@ -121,6 +121,29 @@
 				font-weight: bold;
 			}
 			
+			.ifw_distance {
+				font-weight: bold;
+				color: red;
+			}
+			
+			.slider-wrapper {
+				display: inline-block;
+				width: 150px;
+				height: 50px;
+				padding: 0;
+				font-size: 0.75em;;
+			}
+			
+			.slider-wrapper input {
+				width: 120px;
+				dheight: 50px;
+				margin: 0;
+			}
+			
+			.filters {
+				margin-top: 1em;
+			}
+			
 		    /* Set the size of the div element that contains the map */
   		    #map {
 				height: 100%;  /* The height is 400 pixels */
@@ -174,6 +197,27 @@
 		 }
 
 		 function calculateDistanceFromHome() {
+			if(homeMarker.isPlaced) {
+				for (m in marker_table) {
+				
+					//console.log(homeMarker.m.position, marker_table[m].m.position);
+					dist = google.maps.geometry.spherical.computeDistanceBetween(homeMarker.m.position, marker_table[m].m.position)/1000;
+					dist = dist.toFixed(2);
+					//console.log(dist);
+					//console.log(marker_table[m].json_data.name + ' ' + dist);
+					ifcontent = buildInfoWindowSchoolInfo(marker_table[m].json_data);
+					ifcontent = ifcontent + '<div class=ifw_distance>' + dist + ' km </div>';
+					marker_table[m].m.infowindow.setContent(ifcontent);
+					marker_table[m].distkm = dist;
+					//marker_table[m].m.infowindow.setContent(buildInfoWindowSchoolInfo(marker_table[m].json_data) + ' ' + dist + ' km');
+					//marker_table[m].m.infowindow.setContent(marker_table[m].m.infowindow.content + dist + ' km')	
+					
+				}
+				//for (m in marker_table) {
+				//console.log(marker_table[m].distkm);
+				//}
+			}
+			/*
 			var latitude1 = 39.46;
 			var longitude1 = -0.36;
 			var latitude2 = 40.40;
@@ -181,8 +225,44 @@
 
 			var distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(latitude1, longitude1), new google.maps.LatLng(latitude2, longitude2)); 
 			alert(distance);
+			*/
+		 }
+		 
+		 function filterByDistance() {
+			var maxDist = document.getElementById('lb_maxd').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(Number(maxDist) <= Number(marker_table[m].distkm)) {
+					marker_table[m].m.setMap(null);
+				} else {
+					marker_table[m].m.setMap(map);
+				}
+			}
 		 }
 
+		 function filterByRnk() {
+			//var fP = document.getElementById('fPrice').innerHTML;
+			var minRnk = document.getElementById('lb_minrnk').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(marker_table[m].json_data.Ranking_Perspektyw[2019] == "" || Number(minRnk) < Number(marker_table[m].json_data.Ranking_Perspektyw[2019])) {
+					marker_table[m].m.setMap(null);
+				} else {
+					marker_table[m].m.setMap(map);
+				}
+			}			
+		 }
+
+		 function applyFilters() {
+			 if(homeMarker.isPlaced) {
+				calculateDistanceFromHome()
+				filterByDistance();
+			} else {
+				console.log("Nie można filtrować bez ustawienia pozycji domu");
+			}
+			filterByRnk();
+		 }
+		 
 		 function printHomeLoc() {
 		 	console.log(homeMarker.m.getPosition().toJSON());
 		 }
@@ -237,7 +317,7 @@
 
 			//console.log(data_JSON_tbl[m].Ranking_Perspektyw[2019])
 
-			var minfo = {m: marker, json_data: data_JSON_tbl[m]}
+			var minfo = {m: marker, json_data: data_JSON_tbl[m], distkm: ''}
 			marker_table.push(minfo)
 			
 
@@ -332,6 +412,25 @@
 			<button class="button" onclick="printHomeLoc();">Home</button>
 			-->
 			<button class="button" onclick="calculateDistanceFromHome();">Odległość w KM od domu</button>
+			<div class="filters">
+				<div class="slider-wrapper">
+					<label>Max Dystans:</label>
+				    <input type="range" id="filter_max_dystans" name="Max Dystans" 
+						 min="0" max="30" value="5" step="1"
+						 oninput="document.getElementById('lb_maxd').innerHTML = this.value">
+				    <label id="lb_maxd">5</label>
+				</div>
+				<div class="slider-wrapper">
+					<label>Min Ranking:</label>
+				    <input type="range" id="filter_min_ranking" name="Min Ranking" 
+						 min="0" max="30" value="20" step="1"
+						 oninput="document.getElementById('lb_minrnk').innerHTML = this.value">
+				    <label id="lb_minrnk">20</label>
+				</div>
+				<div>
+					<button class="button" onclick="applyFilters();">Filtruj</button>
+				</div>
+			</div>
 		</div>
 		<div class="main">
 			<div id="map">
