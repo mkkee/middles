@@ -66,9 +66,9 @@
 										 "footer";
 					grid-template-columns: 100%;
 					grid-template-rows: 40px 
-										200px 
-										200fr
-										100fr 
+										1fr 
+										2fr
+										1fr 
 										40px;
 				}
 				.menu {
@@ -81,6 +81,15 @@
 				}
 				.button {
 					font-size: 32px;	
+				}
+				
+				.filters {
+					dfont-size: 2em;
+				}
+				
+				.checkbox {
+					width: 2em;
+					height: 2em;
 				}
 			}
 
@@ -126,22 +135,13 @@
 				color: red;
 			}
 			
-			.slider-wrapper {
-				display: inline-block;
-				width: 150px;
-				height: 50px;
-				padding: 0;
-				font-size: 0.75em;;
-			}
-			
-			.slider-wrapper input {
-				width: 120px;
-				dheight: 50px;
-				margin: 0;
-			}
-			
 			.filters {
 				margin-top: 1em;
+			}
+						
+			.slider-wrapper .slider {
+				width: 100px;
+				margin: 0;
 			}
 			
 		    /* Set the size of the div element that contains the map */
@@ -177,24 +177,17 @@
 			}
 		 }
 		 
-		function disableAllNonPublic() {
-			for (m in marker_table) {
-				if (marker_table[m].json_data.type == "Niepubliczna") {
-					marker_table[m].m.setMap(null);
-				}
-			}
-		 }
 
-		function disableAllNonRnk() {
-			for (m in marker_table) {
-				if (marker_table[m].json_data.Ranking_Perspektyw[2019] == "") {
-					marker_table[m].m.setMap(null);
-				} else {
-					//marker_table[m].m.set('label', marker_table[m].json_data.Ranking_Perspektyw[2019]);	
-					//marker_table[m].m.infowindow.setContent(marker_table[m].m.infowindow.content + 'AAAAAAA')				
-				}
-			}
-		 }
+//		function disableAllNonRnk() {
+//			for (m in marker_table) {
+//				if (marker_table[m].json_data.Ranking_Perspektyw[2019] == "") {
+//					marker_table[m].m.setMap(null);
+//				} else {
+//					//marker_table[m].m.set('label', marker_table[m].json_data.Ranking_Perspektyw[2019]);	
+//					//marker_table[m].m.infowindow.setContent(marker_table[m].m.infowindow.content + 'AAAAAAA')				
+//				}
+//			}
+//		 }
 
 		 function calculateDistanceFromHome() {
 			if(homeMarker.isPlaced) {
@@ -228,6 +221,22 @@
 			*/
 		 }
 		 
+		 function filterOutPublic() {
+			for (m in marker_table) {
+				if (marker_table[m].json_data.type == "Publiczna") {
+					marker_table[m].m.setMap(null);
+				}
+			}
+		 }
+
+		 function filterOutNonPublic() {
+			for (m in marker_table) {
+				if (marker_table[m].json_data.type == "Niepubliczna") {
+					marker_table[m].m.setMap(null);
+				}
+			}
+		 }		 
+		 
 		 function filterByDistance() {
 			var maxDist = document.getElementById('lb_maxd').innerHTML;
 			//run through all markers and disable map for them
@@ -235,7 +244,7 @@
 				if(Number(maxDist) <= Number(marker_table[m].distkm)) {
 					marker_table[m].m.setMap(null);
 				} else {
-					marker_table[m].m.setMap(map);
+					//marker_table[m].m.setMap(map);
 				}
 			}
 		 }
@@ -248,19 +257,30 @@
 				if(marker_table[m].json_data.Ranking_Perspektyw[2019] == "" || Number(minRnk) < Number(marker_table[m].json_data.Ranking_Perspektyw[2019])) {
 					marker_table[m].m.setMap(null);
 				} else {
-					marker_table[m].m.setMap(map);
+					//marker_table[m].m.setMap(map);
 				}
 			}			
 		 }
 
 		 function applyFilters() {
-			 if(homeMarker.isPlaced) {
+			enableAllMarkers();
+			//publiczne
+			if(document.getElementById("chkb_publiczne").checked == false) {
+				filterOutPublic();
+			}
+			//niepubliczne
+			if(document.getElementById("chkb_niepubliczne").checked == false) {
+				filterOutNonPublic();
+			}
+			if(document.getElementById("chkb_maxdst").checked && homeMarker.isPlaced) {
 				calculateDistanceFromHome()
 				filterByDistance();
 			} else {
 				console.log("Nie można filtrować bez ustawienia pozycji domu");
 			}
-			filterByRnk();
+			if(document.getElementById("chkb_minrnk").checked) {
+				filterByRnk();
+			}
 		 }
 		 
 		 function printHomeLoc() {
@@ -406,23 +426,32 @@
 		<div class="sidebar">
 			<button class="button" onclick="disableAllMarkers();">Wyczyść</button>
 			<button class="button" onclick="enableAllMarkers();">Pokaz Wszystkie</button>
-			<button class="button" onclick="disableAllNonPublic();">Pokaz Publiczne</button>
+			<!--<button class="button" onclick="disableAllNonPublic();">Pokaz Publiczne</button>
 			<button class="button" onclick="disableAllNonRnk();">Pokaz z Rankingiem</button>
 			<!--
 			<button class="button" onclick="printHomeLoc();">Home</button>
 			-->
-			<button class="button" onclick="calculateDistanceFromHome();">Odległość w KM od domu</button>
 			<div class="filters">
+				<div>
+					<input class="checkbox" type="checkbox" id="chkb_publiczne" name="chkb_publiczne" checked>
+					<label for="chkb_publiczne">Publiczne</label>
+				</div>
+				<div>
+					<input class="checkbox" type="checkbox" id="chkb_niepubliczne" name="chkb_niepubliczne" checked>
+					<label for="chkb_niepubliczne">Niepubliczne</label>
+				</div>
 				<div class="slider-wrapper">
-					<label>Max Dystans:</label>
-				    <input type="range" id="filter_max_dystans" name="Max Dystans" 
+					<input class="checkbox" type="checkbox" id="chkb_maxdst" name="chkb_maxdst" checked>
+					<label for="chkb_maxdst">Max Dystans:</label>
+				    <input class="slider" type="range" id="filter_max_dystans" name="Max Dystans" 
 						 min="0" max="30" value="5" step="1"
 						 oninput="document.getElementById('lb_maxd').innerHTML = this.value">
 				    <label id="lb_maxd">5</label>
 				</div>
 				<div class="slider-wrapper">
-					<label>Min Ranking:</label>
-				    <input type="range" id="filter_min_ranking" name="Min Ranking" 
+					<input class="checkbox" type="checkbox" id="chkb_minrnk" name="chkb_minrnk" checked>
+					<label for="chkb_minrnk">Min Ranking:</label>
+				    <input class="slider" type="range" id="filter_min_ranking" name="Min Ranking" 
 						 min="0" max="30" value="20" step="1"
 						 oninput="document.getElementById('lb_minrnk').innerHTML = this.value">
 				    <label id="lb_minrnk">20</label>
@@ -431,6 +460,9 @@
 					<button class="button" onclick="applyFilters();">Filtruj</button>
 				</div>
 			</div>
+			<div>&nbsp;</div>
+			<button class="button" onclick="calculateDistanceFromHome();">Przelicz odległość</button>
+
 		</div>
 		<div class="main">
 			<div id="map">
