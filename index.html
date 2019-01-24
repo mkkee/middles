@@ -173,6 +173,16 @@
 			}
 		 }
 
+		 function calculateDistanceFromHome() {
+			var latitude1 = 39.46;
+			var longitude1 = -0.36;
+			var latitude2 = 40.40;
+			var longitude2 = -3.68;
+
+			var distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(latitude1, longitude1), new google.maps.LatLng(latitude2, longitude2)); 
+			alert(distance);
+		 }
+
 		 function printHomeLoc() {
 		 	console.log(homeMarker.m.getPosition().toJSON());
 		 }
@@ -272,11 +282,11 @@
 			  	homeMarker.isPlaced = true;
 		  	}
 		}
-
+			 console.log("Length of Marker table is: " + marker_table.length);
 		}
 		  
 		  
-		  console.log("Length of Marker table is: "+marker_table.length);
+		 
 		 // console.log(infowindow_table[0].content)
 		  //console.log(infowindow_table[1].content)
 		  //console.log(infowindow_table[2].content)
@@ -314,13 +324,14 @@
 			menu | warszawa | kontakt
 		</div>
 		<div class="sidebar">
-			<button class="button" onclick="disableAllMarkers();">Wyczysc</button>
+			<button class="button" onclick="disableAllMarkers();">Wyczyść</button>
 			<button class="button" onclick="enableAllMarkers();">Pokaz Wszystkie</button>
 			<button class="button" onclick="disableAllNonPublic();">Pokaz Publiczne</button>
 			<button class="button" onclick="disableAllNonRnk();">Pokaz z Rankingiem</button>
 			<!--
 			<button class="button" onclick="printHomeLoc();">Home</button>
 			-->
+			<button class="button" onclick="calculateDistanceFromHome();">Odległość w KM od domu</button>
 		</div>
 		<div class="main">
 			<div id="map">
@@ -335,6 +346,6 @@
 	</body>
 	
 	<script async defer
-		src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANvhY-J9fbOgp1Hh-uZzQUw1hYriVvCq0&callback=initMap'>
+		src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANvhY-J9fbOgp1Hh-uZzQUw1hYriVvCq0&callback=initMap&libraries=geometry'>
 	</script>
 </html>
