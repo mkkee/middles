@@ -161,8 +161,8 @@
 			}
 		</style>
 		
-		<ascript src=script/middles_data_all.js></script>
-		<script src=script/middles_data_mid.js></script>
+		<script src=script/middles_data_all.js></script>
+		<ascript src=script/middles_data_mid.js></script>
 		<ascript src=script/middles_data_small.js></script>
 
 		    <script>
@@ -235,6 +235,8 @@
 		function getCarDistanceMatrix(element) {
 			//console.log("In element function");
 			//console.log(element);
+			console.log(Date.now());
+			console.log("Starting CAR")
 			var service = new google.maps.DistanceMatrixService();
 
 			service.getDistanceMatrix(
@@ -248,12 +250,13 @@
 
 			function callback(response, status, index) {
 			  	isInDistanceMatrix = false;
-			  	/*
+			  	
 			  	console.log("In CAR callback. Status = " + status);
 			  	console.log("In CAR callback. Index = " + index);
 			  	console.log(index);
 			  	console.log(response);
-			  	*/
+			  	console.log(status);
+			  	
 			  	if (status == 'OK') {
 				    var origins = response.originAddresses;
 				    var destinations = response.destinationAddresses;
@@ -316,7 +319,17 @@
 			for(m in splitLocTable) {
 				//console.log(splitLocTable[m][0]);
 				//console.log(splitLocTable[m][1]);
-				getCarDistanceMatrix(splitLocTable[m]);	  	
+				const syncc = e => {
+				  //console.log(e);
+				  getCarDistanceMatrix(e);
+				};
+
+				setTimeout(syncc, m*1000, splitLocTable[m]);
+				/*
+				setTimeout(function() {
+					getCarDistanceMatrix(splitLocTable[m]);
+					}, m*1000);
+					*/
 			}
 			return;
 
@@ -333,6 +346,8 @@
 		function getBusDistanceMatrix(element) {
 			//console.log("In element function");
 			//console.log(element);
+			console.log(Date.now());
+			console.log("Starting BUS")
 			var service = new google.maps.DistanceMatrixService();
 
 			service.getDistanceMatrix(
@@ -347,12 +362,12 @@
 
 			function callback(response, status, index) {
 			  	isInDistanceMatrix = false;
-			  	/*
+			  	
 			  	console.log("In CAR callback. Status = " + status);
 			  	console.log("In CAR callback. Index = " + index);
 			  	console.log(index);
 			  	console.log(response);
-			  	*/
+			  	
 			  	if (status == 'OK') {
 				    var origins = response.originAddresses;
 				    var destinations = response.destinationAddresses;
@@ -369,12 +384,12 @@
 					        var to = destinations[j];
 					        var dist = element.distance.value/1000;
 					        dist = dist.toFixed(2);
-					        marker_table[j].transbus_dist = dist;
+					        marker_table[j + index].transbus_dist = dist;
 					        var time = element.duration.value/60;
 					        time = time.toFixed(0);
-					        marker_table[j].transbus_time = time;
+					        marker_table[j + index].transbus_time = time;
 					        //updating infowindow content
-							marker_table[j].m.infowindow.setContent(reBuildInfoWindowSchoolInfo(marker_table[j]));
+							marker_table[j + index].m.infowindow.setContent(reBuildInfoWindowSchoolInfo(marker_table[j + index]));
 						}
 			  		}
 				}
@@ -391,7 +406,13 @@
 			for(m in splitLocTable) {
 				//console.log(splitLocTable[m][0]);
 				//console.log(splitLocTable[m][1]);
-				getBusDistanceMatrix(splitLocTable[m]);	  	
+				const syncc = e => {
+				  //console.log(e);
+				  getBusDistanceMatrix(e);
+				};
+
+				setTimeout(syncc, m*2000, splitLocTable[m]);
+				//getBusDistanceMatrix(splitLocTable[m]);	  	
 			}
 			return;
 
@@ -797,7 +818,7 @@
 					<label for="chkb_niepubliczne">Niepubliczne</label>
 				</div>
 				<div class="slider-wrapper">
-					<input class="checkbox" type="checkbox" id="chkb_maxdst" name="chkb_maxdst" checked>
+					<input class="checkbox" type="checkbox" id="chkb_maxdst" name="chkb_maxdst" unchecked>
 					<label for="chkb_maxdst">Max Dystans:</label>
 				    <input class="slider" type="range" id="filter_max_dystans" name="Max Dystans" 
 						 min="0" max="30" value="5" step="1"
