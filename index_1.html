@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="amhf" />
+		<meta name="copyright" content="2019 AMHF" />
+		<meta name="robots" content="index, follow" />
+		<meta name="description" content="AMHF" />
+		<meta name="keywords" content="szkoly, amhf" />
+
+		<title>Szkoły Średnie</title>
+		
+		<link rel="icon" type="image/png" href="img/middles_fav.png" sizes="16x16"/>
+		<link rel="icon" type="image/png" href="img/middles_fav.png" sizes="32x32"/>
+		<link rel="icon" type="image/png" href="img/middles_fav.png" sizes="96x96"/>
+
+		<xxxlink rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
+		
+		<style type="text/css">
+
+			html, body {
+				margin: 0;
+			}		
+			
+			.menu {grid-area: menu;}
+			.sidebar {grid-area: sidebar;}
+			.main {grid-area: main;}
+			.footer {grid-area: footer;}
+			.ads {grid-area: ads;}
+			
+			.gridcontainer {
+				display: grid;
+				grid-template-areas: "menu menu ads"
+									 "sidebar main ads"
+									 "footer footer footer";
+				min-height: 100vh;
+				grid-template-columns: 250px 1fr 200px;
+				grid-template-rows: 35px 1fr 20px;
+				align-items: stretch;
+			}
+			
+			@media only screen and (max-width: 600px) {
+				.gridcontainer {
+					grid-template-areas: "menu"
+										 "sidebar"
+										 "main"
+										 "ads"
+										 "footer";
+					grid-template-columns: 100%;
+					grid-template-rows: 40px 
+										200px 
+										200fr
+										100fr 
+										40px;
+				}
+			}
+
+			@media only screen 
+   				and (max-width : 1080px) 
+   				and (max-height : 1920px) {
+				.gridcontainer {
+					grid-template-areas: "menu"
+										 "sidebar"
+										 "main"
+										 "ads"
+										 "footer";
+					grid-template-columns: 100%;
+					grid-template-rows: 40px 
+										1fr 
+										2fr
+										1fr 
+										40px;
+				}
+				.menu {
+					font-size: 2em;
+				}
+
+				.sidebar {
+					font-size: 2em;
+					#background-color: #ccdefc;
+				}
+				.button {
+					font-size: 32px;	
+				}
+				
+				.filters {
+					dfont-size: 2em;
+				}
+				
+				.checkbox {
+					width: 2em;
+					height: 2em;
+				}
+			}
+
+			.menu {
+				#background-color: #ccdefc;
+				display: flex;
+				align-items: center;
+				#border-top-left-radius: 0.5em;
+				#border-top-right-radius: 0.5em;
+				padding-left: 10px;
+			}
+			
+			.sidebar {
+				#background-color: #999;
+			}
+			
+			.main {
+				#background-color: #995;
+			}
+			
+			.footer {
+				display: flex;
+				align-items: center;
+				background-color: #000;
+				color: #fff;
+				font-family: "Courier New", Courier, monospace;
+				font-size: 0.75em; /* 14px/16=0.875em */
+				#border-bottom-left-radius: 0.5em;
+				#border-bottom-right-radius: 0.5em;
+			}
+			
+			.menu_logo {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			.ifw_title {
+				font-weight: bold;
+			}
+			
+			.ifw_distance {
+				font-weight: bold;
+				color: red;
+			}
+
+			.ifw_trans_car {
+				font-weight: bold;
+				color: blue;				
+			}
+			
+			.ifw_trans_bus {
+				font-weight: bold;
+				color: green;				
+			}
+
+			.filters {
+				margin-top: 1em;
+			}
+						
+			.slider-wrapper .slider {
+				width: 100px;
+				margin: 0;
+			}
+			
+		    /* Set the size of the div element that contains the map */
+  		    #map {
+				height: 100%;  /* The height is 400 pixels */
+				width: 100%; /*70%;  /* The width is the width of the web page */
+			}
+		</style>
+		
+		<script src=script/middles_data_all.js></script>
+		<ascript src=script/middles_data_mid.js></script>
+		<ascript src=script/middles_data_small.js></script>
+
+		    <script>
+		//load JSON
+		var marker_table = []
+		var infowindow_table = []
+		var map;
+		var homeMarker = {m : '', isPlaced: false}; //will store home marker location
+		var waw = {'lat': 52.229158502885544, 'lng': 21.03080616902306}; //warsaw location for map center
+		//52.23599986454823, lng: 21.01528874984251 - moze lepsza pozycja waw
+		var homeDistanceMax = 20000; //max distance where you can place home marker
+		var homeMarkerLocBeforeDrag;
+
+		//var arrivalDate = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+		//find next Monday;
+		var d = new Date();
+		d.setDate(d.getDate() + (7-d.getDay())%7+1);	
+		//set hour to 7:50AM
+		d.setHours(7);
+		d.setMinutes(50);
+		d.setSeconds(0);
+
+		var busArrivalDate = new Date(d);
+		d.setHours(7);
+		d.setMinutes(00);
+
+		var carDepartureDate = new Date(d);
+		//console.log(busArrivalDate);
+		//console.log(carDepartureDate);
+
+		var splitLocTable = []; //here we will store a subtables with info about index and with 20 elements each for easy use with Distant Matrix
+
+		loadJSON();
+
+		 function disableAllMarkers() {
+			for (m in marker_table) {
+				marker_table[m].m.setMap(null);
+			}
+		 }
+		 
+		 function enableAllMarkers() {
+			for (m in marker_table) {
+				marker_table[m].m.setMap(map);
+			}
+		 }
+
+		 function calculateDistanceFromHome() {
+			if(homeMarker.isPlaced) {
+				for (m in marker_table) {
+				
+					//console.log(homeMarker.m.position, marker_table[m].m.position);
+					var dist = google.maps.geometry.spherical.computeDistanceBetween(homeMarker.m.position, marker_table[m].m.position)/1000;
+					dist = dist.toFixed(2);
+					console.log(dist);
+					console.log(marker_table[m].json_data.name + ' ' + dist);
+					marker_table[m].distkm = dist;
+					//ifcontent = buildInfoWindowSchoolInfo(marker_table[m].json_data);
+					ifcontent = reBuildInfoWindowSchoolInfo(marker_table[m]);
+					//ifcontent = ifcontent + '<div class=ifw_distance>' + dist + ' km </div>';
+					//ifcontent = ifcontent + dist;
+					marker_table[m].m.infowindow.setContent(ifcontent);
+					
+					//marker_table[m].m.infowindow.setContent(buildInfoWindowSchoolInfo(marker_table[m].json_data) + ' ' + dist + ' km');
+					//marker_table[m].m.infowindow.setContent(marker_table[m].m.infowindow.content + dist + ' km')	
+					
+				}
+			}
+		 }
+
+		function getCarDistanceMatrix(element) {
+			//console.log("In element function");
+			//console.log(element);
+			console.log(Date.now());
+			console.log("Starting CAR")
+			var service = new google.maps.DistanceMatrixService();
+
+			service.getDistanceMatrix(
+			  {
+			    origins: [homeMarker.m.position],
+			    destinations: element[0],
+			    drivingOptions: {departureTime: carDepartureDate},
+			    travelMode: 'DRIVING',
+			  }, function(response, status) { callback(response, status, element[1])}
+			);
+
+			function callback(response, status, index) {
+			  	isInDistanceMatrix = false;
+			  	
+			  	console.log("In CAR callback. Status = " + status);
+			  	console.log("In CAR callback. Index = " + index);
+			  	console.log(index);
+			  	console.log(response);
+			  	console.log(status);
+			  	
+			  	if (status == 'OK') {
+				    var origins = response.originAddresses;
+				    var destinations = response.destinationAddresses;
+
+				    //TO DO add check if status was OK
+				    for (var i = 0; i < origins.length; i++) {
+				        var results = response.rows[i].elements;
+				        //console.log("Got " + results.length + " results");
+				      	for (var j = 0; j < results.length; j++) {
+					        var element = results[j];
+					        var distance = element.distance.text;
+					        var duration = element.duration.text;
+					        var from = origins[i];
+					        var to = destinations[j];
+					        var dist = element.distance.value/1000;
+					        dist = dist.toFixed(2);
+					        marker_table[j + index].transcar_dist = dist;
+					        var time = element.duration.value/60;
+					        time = time.toFixed(0);
+					        marker_table[j + index].transcar_time = time;
+					        //updating infowindow content
+							marker_table[j + index].m.infowindow.setContent(reBuildInfoWindowSchoolInfo(marker_table[j + index]));
+				    	}
+					}
+			  	}
+			}
+
+		}
+
+		function buildSplitLocTable() {
+			var dest = [];
+			var i  = 0; 
+			var idx = 0;
+			
+			for (m in marker_table) {
+				//will be pushing only 20 elemens
+				dest.push(marker_table[m].m.position);
+				i = i+1;
+				if (i%20 == 0) {
+					var o = [dest, idx];
+					splitLocTable.push(o);
+					idx = i;
+					dest = [];
+				}
+			}
+			var o = [dest, idx];
+			splitLocTable.push(o);
+		}
+
+		function calculateCarTransitTime() {
+			console.log("Calculating CAR transit time");
+			//rebuild the table only if needed
+			if(splitLocTable.length==0) {
+				buildSplitLocTable();
+			};
+
+			//console.log("We have nice table prepared");
+
+			//in the loop call distance matrix with different objects
+			for(m in splitLocTable) {
+				//console.log(splitLocTable[m][0]);
+				//console.log(splitLocTable[m][1]);
+				const syncc = e => {
+				  //console.log(e);
+				  getCarDistanceMatrix(e);
+				};
+
+				setTimeout(syncc, m*1000, splitLocTable[m]);
+				/*
+				setTimeout(function() {
+					getCarDistanceMatrix(splitLocTable[m]);
+					}, m*1000);
+					*/
+			}
+			return;
+
+/*
+			    transitOptions: TransitOptions,
+			    drivingOptions: DrivingOptions,
+			    unitSystem: UnitSystem,
+			    avoidHighways: Boolean,
+			    avoidTolls: Boolean,
+*/
+		}
+
+
+		function getBusDistanceMatrix(element) {
+			//console.log("In element function");
+			//console.log(element);
+			console.log(Date.now());
+			console.log("Starting BUS")
+			var service = new google.maps.DistanceMatrixService();
+
+			service.getDistanceMatrix(
+			  {
+			    origins: [homeMarker.m.position],
+			    destinations: element[0],
+			    transitOptions: {arrivalTime: busArrivalDate},
+			    travelMode: 'TRANSIT',
+			  }, function(response, status) {callback(response, status, element[1])}
+			);
+
+
+			function callback(response, status, index) {
+			  	isInDistanceMatrix = false;
+			  	
+			  	console.log("In CAR callback. Status = " + status);
+			  	console.log("In CAR callback. Index = " + index);
+			  	console.log(index);
+			  	console.log(response);
+			  	
+			  	if (status == 'OK') {
+				    var origins = response.originAddresses;
+				    var destinations = response.destinationAddresses;
+
+				    //TO DO add check if status was OK
+				    for (var i = 0; i < origins.length; i++) {
+				        var results = response.rows[i].elements;
+				        //console.log("Got " + results.length + " results");
+				      	for (var j = 0; j < results.length; j++) {
+					        var element = results[j];
+					        var distance = element.distance.text;
+					        var duration = element.duration.text;
+					        var from = origins[i];
+					        var to = destinations[j];
+					        var dist = element.distance.value/1000;
+					        dist = dist.toFixed(2);
+					        marker_table[j + index].transbus_dist = dist;
+					        var time = element.duration.value/60;
+					        time = time.toFixed(0);
+					        marker_table[j + index].transbus_time = time;
+					        //updating infowindow content
+							marker_table[j + index].m.infowindow.setContent(reBuildInfoWindowSchoolInfo(marker_table[j + index]));
+						}
+			  		}
+				}
+			}
+		}
+
+		function calculateBusTransitTime() {
+			console.log("Calculating BUS transit time");
+			//rebuild the table only if needed
+			if(splitLocTable.length==0) {
+				buildSplitLocTable();
+			};
+			//in the loop call distance matrix with different objects
+			for(m in splitLocTable) {
+				//console.log(splitLocTable[m][0]);
+				//console.log(splitLocTable[m][1]);
+				const syncc = e => {
+				  //console.log(e);
+				  getBusDistanceMatrix(e);
+				};
+
+				setTimeout(syncc, m*2000, splitLocTable[m]);
+				//getBusDistanceMatrix(splitLocTable[m]);	  	
+			}
+			return;
+
+			var service = new google.maps.DistanceMatrixService();
+			//build dest object
+			var dest = [];
+			for (m in marker_table) {
+				dest.push(marker_table[m].m.position);
+			}
+
+			service.getDistanceMatrix(
+			  {
+			    origins: [homeMarker.m.position],
+			    destinations: dest,
+			    transitOptions: {arrivalTime: busArrivalDate},
+			    travelMode: 'TRANSIT',
+			  }, callback);
+
+/*
+			    transitOptions: TransitOptions,
+			    drivingOptions: DrivingOptions,
+			    unitSystem: UnitSystem,
+			    avoidHighways: Boolean,
+			    avoidTolls: Boolean,
+*/
+
+
+			function callback(response, status) {
+			  if (status == 'OK') {
+			    var origins = response.originAddresses;
+			    var destinations = response.destinationAddresses;
+
+			    //TO DO add check if status was OK
+			    for (var i = 0; i < origins.length; i++) {
+			      var results = response.rows[i].elements;
+			      for (var j = 0; j < results.length; j++) {
+			        var element = results[j];
+			        var distance = element.distance.text;
+			        var duration = element.duration.text;
+			        var from = origins[i];
+			        var to = destinations[j];
+			        console.log(element);
+			        console.log(distance, duration, from, to);
+			        //updating marker table with calculated values
+			        var dist = element.distance.value/1000;
+			        dist = dist.toFixed(2);
+			        marker_table[j].transbus_dist = dist;
+			        var time = element.duration.value/60;
+			        time = time.toFixed(0);
+			        marker_table[j].transbus_time = time;
+			        //updating infowindow content
+					marker_table[j].m.infowindow.setContent(reBuildInfoWindowSchoolInfo(marker_table[j]));
+			      }
+			    }
+			  }
+			}
+		}
+
+		 
+		 function filterOutPublic() {
+			for (m in marker_table) {
+				if (marker_table[m].json_data.type == "Publiczna") {
+					marker_table[m].m.setMap(null);
+				}
+			}
+		 }
+
+		 function filterOutNonPublic() {
+			for (m in marker_table) {
+				if (marker_table[m].json_data.type == "Niepubliczna") {
+					marker_table[m].m.setMap(null);
+				}
+			}
+		 }		 
+		 
+		 function filterByDistance() {
+			var maxDist = document.getElementById('lb_maxd').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(Number(maxDist) <= Number(marker_table[m].distkm)) {
+					marker_table[m].m.setMap(null);
+				} else {
+					//marker_table[m].m.setMap(map);
+				}
+			}
+		 }
+
+		 function filterByRnk() {
+			//var fP = document.getElementById('fPrice').innerHTML;
+			var minRnk = document.getElementById('lb_minrnk').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(marker_table[m].json_data.Ranking_Perspektyw[2019] == "" || Number(minRnk) < Number(marker_table[m].json_data.Ranking_Perspektyw[2019])) {
+					marker_table[m].m.setMap(null);
+				} else {
+					//marker_table[m].m.setMap(map);
+				}
+			}			
+		 }
+
+		 function filterByCarDistance() {
+			var maxDist = document.getElementById('lb_maxcardst').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(Number(maxDist) <= Number(marker_table[m].transcar_dist)) {
+					marker_table[m].m.setMap(null);
+				} else {
+					//marker_table[m].m.setMap(map);
+				}
+			}
+		 }
+
+
+		 function filterByCarTime() {
+			var maxTime = document.getElementById('lb_maxcartime').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(Number(maxTime) <= Number(marker_table[m].transcar_time)) {
+					marker_table[m].m.setMap(null);
+				} else {
+					//marker_table[m].m.setMap(map);
+				}
+			}
+		 }
+
+		 function filterByBusDistance() {
+			var maxDist = document.getElementById('lb_maxbusdst').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(Number(maxDist) <= Number(marker_table[m].transbus_dist)) {
+					marker_table[m].m.setMap(null);
+				} else {
+					//marker_table[m].m.setMap(map);
+				}
+			}
+		 }
+
+
+		 function filterByBusTime() {
+			var maxTime = document.getElementById('lb_maxbustime').innerHTML;
+			//run through all markers and disable map for them
+			for (m in marker_table) {
+				if(Number(maxTime) <= Number(marker_table[m].transbus_time)) {
+					marker_table[m].m.setMap(null);
+				} else {
+					//marker_table[m].m.setMap(map);
+				}
+			}
+		 }
+
+
+		 function applyFilters() {
+			enableAllMarkers();
+			//publiczne
+			if(document.getElementById("chkb_publiczne").checked == false) {
+				filterOutPublic();
+			}
+			//niepubliczne
+			if(document.getElementById("chkb_niepubliczne").checked == false) {
+				filterOutNonPublic();
+			}
+			if(document.getElementById("chkb_maxdst").checked && homeMarker.isPlaced) {
+				calculateDistanceFromHome()
+				filterByDistance();
+			} else {
+				console.log("Nie można filtrować bez ustawienia pozycji domu");
+			}
+			if(document.getElementById("chkb_minrnk").checked) {
+				filterByRnk();
+			}
+			if(document.getElementById("chkb_maxcardst").checked && homeMarker.isPlaced) {
+				filterByCarDistance();
+			}			
+			if(document.getElementById("chkb_maxcartime").checked && homeMarker.isPlaced) {
+				filterByCarTime();
+			}
+			if(document.getElementById("chkb_maxbusdst").checked && homeMarker.isPlaced) {
+				filterByBusDistance();
+			}			
+			if(document.getElementById("chkb_maxbustime").checked && homeMarker.isPlaced) {
+				filterByBusTime();
+			}			
+		 }
+		 
+		 function printHomeLoc() {
+		 	console.log(homeMarker.m.getPosition().toJSON());
+		 }
+
+
+		 function buildInfoWindowSchoolInfo(schoolJSON) {
+		  iwcontent = '<div class="ifw_container">'
+		  iwcontent = iwcontent + '<div class="ifw_title">' + schoolJSON.name +'</div>';
+		  iwcontent = iwcontent + '<div class="ifw_webpage"> <a target="_blank" href="http://' + schoolJSON.webpage +'">' + schoolJSON.webpage + '</a></div>';
+		  iwcontent = iwcontent + '<div class="ifw_patron">Patron: ' + schoolJSON.patron + '</div>';		  
+		  iwcontent = iwcontent + '<div class="ifw_address">' + schoolJSON.street + ' ' + schoolJSON.street_num + '</div>';	
+		  //console.log(schoolJSON);	  
+		  iwcontent = iwcontent + '<div class="ifw_rnk_perspektywy">2019: ' + schoolJSON.Ranking_Perspektyw[2019] + ' 2018: ' + schoolJSON.Ranking_Perspektyw[2018] + ' 2017: ' + schoolJSON.Ranking_Perspektyw[2017]+ ' 2016: ' + schoolJSON.Ranking_Perspektyw[2016]+ ' 2015: ' + schoolJSON.Ranking_Perspektyw[2015]+ '</div>';		
+		  //iwcontent = iwcontent + '<div class=ifw_distance>' + distkm + ' km </div>';  
+ 			iwcontent = iwcontent + '<div class="ifw_distance"> Odległość:</div>';  
+			iwcontent = iwcontent + '<div class="ifw_trans_car"> Samochodem: </div>';  			
+			iwcontent = iwcontent + '<div class="ifw_trans_bus"> Autobusem: </div>';  			
+		  iwcontent = iwcontent + '</div>';
+		  //console.log("ifwcontent = "+iwcontent)
+
+		  return iwcontent;
+		 }
+		 //same function but taking marker info object 
+		function reBuildInfoWindowSchoolInfo(minfo) {
+			iwcontent = '<div class="ifw_container">'
+			iwcontent = iwcontent + '<div class="ifw_title">' + minfo.json_data.name +'</div>';
+			iwcontent = iwcontent + '<div class="ifw_webpage"> <a target="_blank" href="http://' + minfo.json_data.webpage +'">' + minfo.json_data.webpage + '</a></div>';
+			iwcontent = iwcontent + '<div class="ifw_patron">Patron: ' + minfo.json_data.patron + '</div>';		  
+			iwcontent = iwcontent + '<div class="ifw_address">' + minfo.json_data.street + ' ' + minfo.json_data.street_num + '</div>';	
+			//console.log(minfo.json_data);	  
+			iwcontent = iwcontent + '<div class="ifw_rnk_perspektywy">2019: ' + minfo.json_data.Ranking_Perspektyw[2019] + ' 2018: ' + minfo.json_data.Ranking_Perspektyw[2018] + ' 2017: ' + minfo.json_data.Ranking_Perspektyw[2017]+ ' 2016: ' + minfo.json_data.Ranking_Perspektyw[2016]+ ' 2015: ' + minfo.json_data.Ranking_Perspektyw[2015]+ '</div>';		
+
+			if(minfo.distkm == '') {
+				iwcontent = iwcontent + '<div class="ifw_distance"> Odległość:</div>'; 
+			} else {
+				iwcontent = iwcontent + '<div class="ifw_distance"> Odległość: ' + minfo.distkm + ' km </div>';  	
+			}
+			
+			if(minfo.transcar_dist == '') {
+				iwcontent = iwcontent + '<div class="ifw_trans_car"> Samochodem: </div>';  			
+			} else {
+				iwcontent = iwcontent + '<div class="ifw_trans_car"> Samochodem: ' + minfo.transcar_dist + ' km '+ minfo.transcar_time + ' minut</div>';  			
+			}
+
+			if(minfo.transbus_dist == '') {
+				iwcontent = iwcontent + '<div class="ifw_trans_bus"> Autobusem: </div>';  			
+			} else {
+				iwcontent = iwcontent + '<div class="ifw_trans_bus"> Autobusem: ' + minfo.transbus_dist + ' km '+ minfo.transbus_time + ' minut</div>';  			
+			}
+
+			iwcontent = iwcontent + '</div>';
+			  //console.log("ifwcontent = "+iwcontent)
+
+			  return iwcontent;
+		}
+
+  		function placeHomeMarker(latLng, map) {
+		  	console.log("in click listener, placingHomeMarker");
+		  	//verify if not too far
+		  	if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(waw), latLng) > homeDistanceMax) {
+		  		//new google.maps.LatLng()
+		  		console.log("A bit too far");
+		  	} else {
+			  	if(homeMarker.isPlaced) {
+			  		console.log('old position');
+			  		console.log(homeMarker.m.getPosition().toJSON());
+			  		console.log(latLng.toJSON());
+
+			  		homeMarker.m.setPosition(latLng);
+			  		//homeMarker.m.setMap(null);
+			  		//homeMarker.m.setMap(map);
+			  		//homeMarker.isPlaced = false;
+			  		
+			  	} else {
+				  	var marker = new google.maps.Marker({
+				    	position: latLng,
+				    	map: map,
+				    	icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+				    	title: 'Home',
+				    	draggable: true
+				  	});
+				  	console.log(latLng.lat(), latLng.lng());
+				  	homeMarker.m = marker;
+				  	homeMarker.isPlaced = true;
+
+				  	//block placing home marker too far
+				  	google.maps.event.addListener(marker, 'dragstart', function(e) {
+				  		console.log('drag start on home loc');
+				  		homeMarkerLocBeforeDrag = e.latLng;
+				  		console.log(e.latLng.lat(), e.latLng.lng());
+  					});
+
+				  	google.maps.event.addListener(marker, 'dragend', function(e) {
+				  		console.log('drag end');
+				  		if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(waw), e.latLng) > homeDistanceMax) {
+		  					console.log("A bit too far");
+		  					homeMarker.m.setPosition(homeMarkerLocBeforeDrag);
+		  				} else {
+
+		  				}
+				  		console.log(e.latLng.lat(), e.latLng.lng());
+  					});
+
+			  	}  		
+		  	}
+		}
+
+		// Initialize and add the map
+		function initMap() {
+		  // The location of Uluru
+		  //console.log("in init map");
+		 
+		   // The map, centered at Waw
+		  //console.log(document.getElementById('map'));
+		  
+		  map = new google.maps.Map(
+			  document.getElementById('map'), {zoom: 11, center: waw});
+			
+		  //create all markers and infowindows  
+		  console.log("Length of JSON table is: "+data_JSON_tbl.length);
+		  for (m in data_JSON_tbl) {
+			//console.log(data_JSON_tbl[m]);
+			//console.log(data_JSON_tbl[m].Geo_Location[0]);	
+			//var contentString = data_JSON_tbl[m].name;
+		    var contentString = buildInfoWindowSchoolInfo(data_JSON_tbl[m]);
+
+			//console.log(contentString);
+			var mkinfowindow = new google.maps.InfoWindow({
+				  content: contentString
+			});	
+			var marker =  new google.maps.Marker({
+				position: {lat:data_JSON_tbl[m].Geo_Location[0].lat, lng:data_JSON_tbl[m].Geo_Location[0].long},
+				map: map,
+				title: data_JSON_tbl[m].name,
+				draggable: false,
+				infowindow: mkinfowindow,
+				ifopen: false,
+				label: data_JSON_tbl[m].Ranking_Perspektyw[2019].toString()
+			})
+
+			//console.log(data_JSON_tbl[m].Ranking_Perspektyw[2019])
+
+			var minfo = {m: marker, json_data: data_JSON_tbl[m], distkm: '', transcar_time: '', transcar_dist: '', transbus_time: '', transbus_dist: '', disttime: ''}
+			marker_table.push(minfo)
+			
+
+			google.maps.event.addListener(marker, 'click', function() {	  
+			  if(this.ifopen == false) {
+				  this.infowindow.open(map, this);
+				  //this.infowindow.setContent(this.infowindow.content + 'AAAAAAA')
+				  this.ifopen = true;
+			  } else {
+				  this.infowindow.close(map, this);
+				  this.ifopen = false;
+			  }
+			});
+		};
+
+		map.addListener('click', function(e) {
+    		placeHomeMarker(e.latLng, map);
+  		});
+
+			 console.log("Length of Marker table is: " + marker_table.length);
+		}
+		  
+		  
+		 
+		 // console.log(infowindow_table[0].content)
+		  //console.log(infowindow_table[1].content)
+		  //console.log(infowindow_table[2].content)
+
+		 
+		/*  var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		  });
+			var marker = new google.maps.Marker({
+			position: waw,
+			map: map,
+			title: 'Warszawa'
+		  });
+		  marker.addListener('click', function() {
+			infowindow.open(map, marker);
+		  });*/
+		  
+		  
+		</script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-4261661214028769",
+		    enable_page_level_ads: true
+		  });
+		</script>
+
+		<script> </script>
+		
+	</head>
+<body>
+	<div class="gridcontainer">
+		<div class="menu">
+			<div class="menu_logo"><img src="img/middles_logo.png" alt="Logos" width=25px height=25px> </div>
+			menu | warszawa | kontakt
+		</div>
+		<div class="sidebar">
+			<button class="button" onclick="disableAllMarkers();">Wyczyść</button>
+			<button class="button" onclick="enableAllMarkers();">Pokaz Wszystkie</button>
+			<!--<button class="button" onclick="disableAllNonPublic();">Pokaz Publiczne</button>
+			<button class="button" onclick="disableAllNonRnk();">Pokaz z Rankingiem</button>
+			<!--
+			<button class="button" onclick="printHomeLoc();">Home</button>
+			-->
+			<div class="filters">
+				<div>
+					<input class="checkbox" type="checkbox" id="chkb_publiczne" name="chkb_publiczne" checked>
+					<label for="chkb_publiczne">Publiczne</label>
+				</div>
+				<div>
+					<input class="checkbox" type="checkbox" id="chkb_niepubliczne" name="chkb_niepubliczne" checked>
+					<label for="chkb_niepubliczne">Niepubliczne</label>
+				</div>
+				<div class="slider-wrapper">
+					<input class="checkbox" type="checkbox" id="chkb_maxdst" name="chkb_maxdst" unchecked>
+					<label for="chkb_maxdst">Max Dystans:</label>
+				    <input class="slider" type="range" id="filter_max_dystans" name="Max Dystans" 
+						 min="0" max="30" value="5" step="1"
+						 oninput="document.getElementById('lb_maxd').innerHTML = this.value">
+				    <label id="lb_maxd">5</label>
+				</div>
+				<div class="slider-wrapper">
+					<input class="checkbox" type="checkbox" id="chkb_minrnk" name="chkb_minrnk" unchecked>
+					<label for="chkb_minrnk">Min Ranking:</label>
+				    <input class="slider" type="range" id="filter_min_ranking" name="Min Ranking" 
+						 min="0" max="30" value="20" step="1"
+						 oninput="document.getElementById('lb_minrnk').innerHTML = this.value">
+				    <label id="lb_minrnk">20</label>
+				</div>
+				<div class="slider-wrapper">
+					<input class="checkbox" type="checkbox" id="chkb_maxcardst" name="chkb_maxcardst" checked>
+					<label for="chkb_maxcardst">Max Dyst Samochodem:</label>
+				    <input class="slider" type="range" id="filter_max_car_dst" name="Max Car Dst" 
+						 min="0" max="30" value="10" step="1"
+						 oninput="document.getElementById('lb_maxcardst').innerHTML = this.value">
+				    <label id="lb_maxcardst">10</label>
+				</div>
+				<div class="slider-wrapper">
+					<input class="checkbox" type="checkbox" id="chkb_maxcartime" name="chkb_maxcartime" checked>
+					<label for="chkb_maxcartime">Max Czas Samochodem:</label>
+				    <input class="slider" type="range" id="filter_max_car_time" name="Max Car Time" 
+						 min="0" max="120" value="60" step="1"
+						 oninput="document.getElementById('lb_maxcartime').innerHTML = this.value">
+				    <label id="lb_maxcartime">60</label>
+				</div>
+
+				<div class="slider-wrapper">
+					<input class="checkbox" type="checkbox" id="chkb_maxbusdst" name="chkb_maxbusdst" checked>
+					<label for="chkb_maxbusdst">Max Dyst Autobusem:</label>
+				    <input class="slider" type="range" id="filter_max_bus_dst" name="Max bus Dst" 
+						 min="0" max="30" value="10" step="1"
+						 oninput="document.getElementById('lb_maxbusdst').innerHTML = this.value">
+				    <label id="lb_maxbusdst">10</label>
+				</div>
+				<div class="slider-wrapper">
+					<input class="checkbox" type="checkbox" id="chkb_maxbustime" name="chkb_maxbustime" checked>
+					<label for="chkb_maxbustime">Max Czas Autobusem:</label>
+				    <input class="slider" type="range" id="filter_max_bus_time" name="Max bus Time" 
+						 min="0" max="120" value="60" step="1"
+						 oninput="document.getElementById('lb_maxbustime').innerHTML = this.value">
+				    <label id="lb_maxbustime">60</label>
+				</div>
+
+
+				<div>
+					<button class="button" onclick="applyFilters();">Filtruj</button>
+				</div>
+			</div>
+			<div>&nbsp;</div>
+			<button class="button" onclick="calculateDistanceFromHome();">Przelicz odległość</button>
+			<div>&nbsp;</div>
+			<button class="button" onclick="calculateCarTransitTime();">Przelicz czas CAR</button>
+			<div>&nbsp;</div>
+			<button class="button" onclick="calculateBusTransitTime();">Przelicz czas BUS</button>
+
+		</div>
+		<div class="main">
+			<div id="map">
+			</div>
+		</div>
+		<div class="ads">
+		</div>
+		<div class="footer">
+			&nbsp;&nbsp;&nbsp;&nbsp;Created by AMHF. 2019. 
+		</div>
+	</div>
+	</body>
+	
+	<script async defer
+		src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANvhY-J9fbOgp1Hh-uZzQUw1hYriVvCq0&callback=initMap&libraries=geometry'>
+	</script>
+</html>
